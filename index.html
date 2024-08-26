@@ -163,6 +163,49 @@ you have to add some JavaScript code.-->
   target="_blank">
   Jump to links-color.html page</a>
   <h3 id="c2">Bottom of the body</h3>
+<!--This was bottom of the body but now more code added-->
+
+<pre>we suggest using the style attribute.
+It prevents styles sheets from changing the size of images:
+  </pre>
+<img src="Images\img_girl.jpg" alt="Girl in a Jacket"
+style="width: 300px;height: 350px;"
+>
+<!--Animated Images <img src="programming.gif" 
+alt="Computer Man" style="width:48px;height:48px;"> 
+-->
+<!--To use an image as a link, put the <img> 
+tag inside the <a> tag:-->
+
+  <!--Folating Images-->
+  <p><strong>Float the image to the right</strong></p>
+  <p>
+    <img src="Images/smiley.gif" alt="Smiley Face"
+    style="float:right; width:42px; height:42px;">
+    A paragraph with a floating image.
+     A paragraph with a floating image. 
+     A paragraph with a floating image.</p>
+
+     <!--The HTML <map> tag defines an image map.
+    An image map is an image with clickable areas.
+  The areas are defined with one or more <area> tags.
+  -->
+  <p>Click on the computer, the phone, or the cup of 
+coffee to go to a new page and read more
+ about the topic:
 </p>
+<img src="Images/workplace.jpg" alt="Workplace"
+usemap="#workmap" width="400px" height="379px">
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" 
+  href="https://en.wikipedia.org/wiki/Computer"
+   alt="Computer">
+
+  <area shape="rect" coords="290,172,333,250" 
+  alt="Phone" href="phone.htm">
+  
+  <area shape="circle" coords="337,300,44" 
+  alt="Cup of coffee" href="coffee.htm">
+</map>
 </body>
 </html>
