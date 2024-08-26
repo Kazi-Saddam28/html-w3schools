@@ -15,7 +15,9 @@
     </p>
     <p title="John 'ShotGun' Nelson">John with single quotes</p>
     <br>
-    <p style="color: blue;background-color: pink;font-size: 150%;text-align: center;">The pre tag preserves both spaces and line breaks</p>
+    <p style="color: blue;background-color: pink;font-size:
+    150%;text-align: center;">
+    The pre tag preserves both spaces and line breaks</p>
   
     <pre style="color: blue;background-color: aquamarine;">
    My Bonnie lies over the ocean.
@@ -36,15 +38,24 @@
       height="400"
       alt="Research Paper searching criteria"
     />
-    <p><b><i>This is a <mark>bold</mark> and <mark>italic</mark> paragraph</b></i></p>
-    <p><strong>This is an important paragraph but <del>similar</del> <ins>no difference</ins> with bold</strong></p>
+    <p><b><i>This is a <mark>bold</mark> and <mark>
+      italic</mark> paragraph</b></i></p>
+
+    <p><strong>This is an important paragraph but 
+      <del>similar</del> <ins>no difference</ins> 
+      with bold</strong></p>
+
   <p>This is <sup>superscripted</sup>and This is <sub>subscripted</sub>text</p>
-  <p><abbr title="The World Health Organization ">WHO</abbr> was founded in 1948.</p>
+  <p><abbr title="The World Health Organization
+     ">WHO</abbr> was founded in 1948.</p>
+
   <p>Here is a quote from WWF's website:</p>
     <blockquote cite="http://www.worldwildlife.org/who/index.html">
      For 60 years, WWF has worked to help people and nature thrive.</blockquote>
 
-  <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+  <p>WWF's goal is to: <q>Build a future where people live 
+    in harmony with nature.</q></p>
+
   <address>
     Written by Kazi Saddam<br>
     Visit us at:<br>
@@ -53,10 +64,13 @@
     Bangladesh
     </address>
 <hr><br>
- <img src="https://www.w3schools.com/html/img_the_scream.jpg" width="220" height="277" alt="The Scream">  
+ <img src="https://www.w3schools.com/html/img_the_scream.jpg"
+  width="220" height="277" alt="The Scream">  
+
  <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
 
- <p>bi-directional override (bdo), the next line will be written from right to left (rtl):</p>
+ <p>bi-directional override (bdo), the next line 
+  will be written from right to left (rtl):</p>
 
  <bdo dir="rtl">This line will be written from right to left</bdo>
  
@@ -75,9 +89,11 @@
 <!--hsl=percent value,a= normal value-->
 <p style="background-color: hsla(0, 100%, 50%, 0.5);">hsla color showing</p>
 <hr><br>
-<p style="color:blue;"> An inline CSS is used to apply a unique style to a single HTML element.</p1>
+<p style="color:blue;"> An inline CSS is used to apply 
+  a unique style to a single HTML element.</p1>
       
-<p>An internal CSS is defined in the head section of an HTML page, within a style element.
+<p>An internal CSS is defined in the head section 
+  of an HTML page, within a style element.
 </p>
 <!--  
 <head>
@@ -95,20 +111,48 @@ p    {color: red;
 </body>
 -->
 <p>Here is a bug, I will fix it later</p>
-<p>An external style sheet is used to define the style for many HTML pages.
+<p>An external style sheet is used 
+  to define the style for many HTML pages.
 
-  To use an external style sheet, add a link to it in the head<!--<head>--> section of each HTML page:</p>
+  To use an external style sheet, 
+  add a link to it in the head<!--<head>--> 
+    section of each HTML page:</p>
 
-
+<hr>
     <p>The image below is a link. Try to click on it.</p>
 <br>
+<!--Absolute(with "https://www") URLs-->
 <a href="http://127.0.0.1:5500/html-w3schools/index.html">
+ <!--RElative URLs-->
   <img src="Images\smiley.gif" 
   alt="Visit HTML Learning page from Kazi!"
    style="width:42px; height:42px;">
   </a>
 <br><br>
+<!--RElative(Without "https://www" parts) URLs-->
   <a href="https://www.w3schools.com/"
   target="_blank">Visit W3Schools!</a><!--Open link in a new window-->
+<p><a href="mailto:Kazimdsaddamhossain@gmail.com">Send Email</a></p>
+<br>
+<!--To use an HTML button as a link, 
+you have to add some JavaScript code.-->
+<button onclick="document.location=
+'https://www.w3schools.com/html/html_links.asp'">HTML Tutorial</button>
+
+<!--The title attribute specifies extra information about an element.
+ The information is most often shown as a tooltip text when 
+ the mouse moves over the element.-->
+ <a href="https://www.w3schools.com/html/html_links.asp"
+ title="Go to W3Schools HTML section">
+ Visit HTML Tutorials</a>
+ <!--
+ Link to a page located in the same folder 
+ as the current page: 
+ <a href="default.asp">HTML tutorial</a>
+  -->
+<hr>
+<!--HTML Links - Different Colors-->
+
+
 </body>
 </html>
