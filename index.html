@@ -4,7 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Learning</title>
+  <!--Bacground image code starts-->
+  <style>
+    body {
+      background-image: url("Images/back.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      background-size: cover;
+    }
+  </style>
+  <!--Bacground image code ended-->
   </head>
+  <!--Head and Body-->
   <body
    style="background-color: powderblue;">
    <p id="c1">Top of the body</p>
@@ -207,5 +219,25 @@ usemap="#workmap" width="400px" height="379px">
   <area shape="circle" coords="337,300,44" 
   alt="Cup of coffee" href="coffee.htm">
 </map>
+
+<!--Background Images-->
+<h3>Background Image</h3>
+<p
+style="background-image: url('Images/img_girl.jpg');">
+  will repeat itself in the direction(s)<br>
+  where it is smaller than the element<br>
+  where it is specified.Try resizing the<br>
+  browser window to see how the<br>
+  background image behaves.</p>
+<!--Specify the background image in the <style> element:
+
+<style>
+p {
+  background-image: url('img_girl.jpg');
+}
+</style>-->
+
+<!--Background Image on a Page-->
+
 </body>
 </html>
