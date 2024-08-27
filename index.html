@@ -228,6 +228,15 @@ style="background-image: url('Images/img_girl.jpg');">
   where it is smaller than the element<br>
   where it is specified.Try resizing the<br>
   browser window to see how the<br>
+  background image behaves.
+  will repeat itself in the direction(s)<br>
+  where it is smaller than the element<br>
+  where it is specified.Try resizing the<br>
+  browser window to see how the<br>
+  background image behaves.will repeat itself in the direction(s)<br>
+  where it is smaller than the element<br>
+  where it is specified.Try resizing the<br>
+  browser window to see how the<br>
   background image behaves.</p>
 <!--Specify the background image in the <style> element:
 
@@ -237,7 +246,34 @@ p {
 }
 </style>-->
 
-<!--Background Image on a Page-->
+<!--Background Image on a Page (initialize inside head)-->
+
+
+
+<!--HTML <picture> Element-->
+  <p>The picture Element</p>
+  <picture>
+    <source media="(min-width:650px )"
+     srcset="Images\random.png">
+
+    <source media="(min-width:465px )"
+    srcset="Images\smiley.gif">
+
+    <img src="Images\img_girl.jpg" 
+    style="width:auto;">
+
+  </picture>
+  <p>Resize the browser to see different versions of the picture
+     loading at different viewport sizes.
+    The browser looks for the first source element where the media 
+    query matches the user's current viewport width,
+    and fetches the image specified in the srcset attribute.</p>
+    
+    <p>The img element is required as the last child tag of the 
+      picture declaration block.The img element is used to provide 
+      backward compatibility for browsers that do not support the 
+      picture element, or if none of the source tags matched.
+    </p>
 
 </body>
 </html>
