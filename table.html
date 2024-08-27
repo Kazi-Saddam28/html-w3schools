@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables</title>
+</head>
+
+<style>
+    table, th, td{
+        border: 1px solid black;
+        border-style: solid;
+        /*dotted,dashed,double,groove,ridge,inset,outset,
+        none,hidden*/
+        border-color: black;
+        border-collapse: collapse;
+        /* border-radius: 10px */
+        /*Skip the border around the table by leaving out 
+        table from the css selector:
+        th, td {
+  border: 1px solid black;
+  border-radius: 10px;}
+  */
+  text-align:center ;
+    }
+    th{
+        background-color: aquamarine;
+
+    }
+    td{
+        background-color: rgb(184, 211, 202);
+    }
+</style>
+
+<body>
+    <h3>Persons Details Table</h3>
+    <table
+    style="width: 100%;">
+    <caption>Cricket Player Details</caption>
+    <tr style="height: 35px;">
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th style="width: 40%;">Nationality</th>
+    </tr>
+<!--You can have a header that spans over two or
+ more columns.-->
+<!--
+<tr style="height: 35px;">
+<th colspan="2">Name</th>
+    <th style="width: 40%;">Nationality</th>
+  </tr>-->
+
+
+    <tr>
+      <td>Sam</td>
+      <td>Curran</td>
+      <td>England</td>
+    </tr>
+    <tr>
+        <td>Tom</td>
+        <td>Curran</td>
+        <td>England</td>
+    </tr>
+    <tr>
+        <td>Rillee</td>
+        <td>Rossouw</td>
+        <td>South Africa</td>
+    </tr>
+    </table>
+<!--Vertical Table Headers-->
+    <!--
+    <table>
+  <tr>
+    <th>Firstname</th>
+    <td>Jill</td>
+    <td>Eve</td>
+  </tr>
+  <tr>
+    <th>Lastname</th>
+    <td>Smith</td>
+    <td>Jackson</td>
+  </tr>
+  <tr>
+    <th>Age</th>
+    <td>94</td>
+    <td>50</td>
+  </tr>
+</table>
+    -->
+    
+    </body>
+    </html>
+    
+    
+</body>
+</html>
