@@ -13,7 +13,14 @@
         /*dotted,dashed,double,groove,ridge,inset,outset,
         none,hidden*/
         border-color: black;
-        border-collapse: collapse;
+       border-collapse: collapse;
+       /* if  border-collapse: collapse; is working
+        border-spacing not workin 
+        border-spacing: 25px; 
+        */
+
+
+
         /* border-radius: 10px */
         /*Skip the border around the table by leaving out 
         table from the css selector:
@@ -22,14 +29,25 @@
   border-radius: 10px;}
   */
   text-align:center ;
+ 
     }
+    
+
     th{
         background-color: aquamarine;
-
+        border-color: antiquewhite;
+        padding:15px;
     }
     td{
         background-color: rgb(184, 211, 202);
+        border-color: antiquewhite;
+        padding:15px;
+        border-spacing: 30px;
     }
+    tr:nth-child(even){
+      background-color: rgb(43, 0, 99);
+}
+
 </style>
 
 <body>
@@ -37,7 +55,7 @@
     <table
     style="width: 100%;">
     <caption>Cricket Player Details</caption>
-    <tr style="height: 35px;">
+    <tr style="height: 65px;">
         <th>FirstName</th>
         <th>LastName</th>
         <th style="width: 40%;">Nationality</th>
@@ -50,13 +68,13 @@
     <th style="width: 40%;">Nationality</th>
   </tr>-->
 
-
+<!--Similarly rowspan is possible-->
     <tr>
       <td>Sam</td>
       <td>Curran</td>
       <td>England</td>
     </tr>
-    <tr>
+    <tr style="height: 100px;">
         <td>Tom</td>
         <td>Curran</td>
         <td>England</td>
@@ -65,6 +83,19 @@
         <td>Rillee</td>
         <td>Rossouw</td>
         <td>South Africa</td>
+    </tr>
+    <tr><td>Glenn</td>
+      <td>Maxwell</td>
+      <td>Australia</td>
+    </tr><td>Shakib</td>
+    <td>Al Hasan</td>
+    <td>Bangladesh</td>
+    <tr>
+      <tr><td> Kane</td> 
+        <td>Williamson</td>
+        <td>New Zealand</td>
+</tr>
+
     </tr>
     </table>
 <!--Vertical Table Headers-->
@@ -87,10 +118,46 @@
   </tr>
 </table>
     -->
-    
+<br><hr><br>
+    <!--HTML Table Styling-->
+<h2>Zebra Striped Table</h2>
+<p>For zebra-striped tables, use the nth-child() 
+  selector and add a background-color to all even (or odd) 
+  table rows:</p>
+<!--
+  <head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+</style>
+</head>
+-->
+
+<!--
+To make vertical zebra stripes, style every other column,
+ instead of every other row.
+ td:nth-child(even), th:nth-child(even) {
+  background-color: #D6EEEE;
+}
+
+Also can combine both by keeping both
+-->
+
+
     </body>
     </html>
-    
-    
-</body>
+
+
+  </body>
 </html>
