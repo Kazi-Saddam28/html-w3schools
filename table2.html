@@ -3,7 +3,8 @@
 <head>
     <title>HTML Table Colgroup</title>
 
-  <style> ul{
+  <style> 
+  ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -29,12 +30,39 @@ background-color: #883939;
 </style>
 
 <style>
+
+div.mycontainer{
+  width: 100%;
+  overflow: auto;
+}
+div.mycontainer div{
+  width: 33%;
+  float: left;
+}
+  </style>
+
+<!--/*
+div{
+  width: 30%;
+  display: inline-block;
+}
+  */-->
+
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+</style>
+
+<style>
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
 </style>
 </head>
+
 <body>
 
 <h2>Colgroup</h2>
@@ -123,7 +151,81 @@ start="50" Use the start attribute to start counting from a specified number:
 -->
 
 
-</body>
-</html>
+
+<p>HTML Block and Inline Elements</p>
+
+<!--Here are the block-level elements in HTML:
+
+<address><article><aside><blockquote><canvas><dd>
+<div><dl><dt><fieldset><figcaption><figure><footer>
+<form><h1>-<h6><header><hr><li><main><nav><noscript>
+<ol><p><pre><section><table><tfoot><ul><video>
+-->
+<address>
+  Shere e bangla road,
+  Dhaka 1209,
+  Bangladesh
+</address>
+
+<!--
+ Here are the inline elements in HTML:
+
+<a><abbr><acronym><b><bdo><big><br><button><cite>
+<code><dfn><em><i><img><input><kbd><label><map><object>
+<output><q><samp><script><select><small><span><strong>
+<sub><sup><textarea><time><tt><var> 
+-->
+<p> <span style="border: 1px solid black;">
+   Hello Wordl</span></p>
 
 
+<h3>HTML Div Element</h3>
+<div
+style="width: 300px;margin: auto; background-color: rgb(75, 184, 11);"
+ >
+  <h2>London</h2>
+  <p>London is the capital city of England.</p>
+  <p>London has over 13 million inhabitants.</p>
+</div>
+
+<div
+style="width: 300px;margin: auto; background-color: red;"
+ >
+<h2>London</h2>
+<p>London is the capital city of England.</p>
+<p>London has over 13 million inhabitants.</p>
+</div>
+
+<h3>Aligning div elements side by side</h3>
+
+<div class="mycontainer">
+
+
+  <div style="background-color: #FFF4A3;">
+
+<h2>London</h2>
+    <p>London is the capital city of England.</p>
+    <p>London has over 13 million inhabitants.
+  </div>
+  <div style="background-color: #883939;">
+    <h2>London</h2>
+    <p>London is the capital city of England.</p>
+    <p>London has over 13 million inhabitants.
+  </div>
+  <div style="background-color: aquamarine;">
+    <h2>London</h2>
+    <p>London is the capital city of England.</p>
+    <p>London has over 13 million inhabitants.
+
+  </div>
+
+</div>
+
+
+
+
+</body></html>
+
+
+
+<!--HTML Div Finished-->
