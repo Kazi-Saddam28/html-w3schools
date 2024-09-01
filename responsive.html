@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    
+    <meta 
+    name="viewport" 
+    content="width=device-width, 
+    initial-scale=1.0">
+
+    <title>Responsive Web Design</title>
+</head>
+<body>
+    <h2>Responsive Image</h2>
+    <p>When the CSS width property is set in a percentage 
+    value, the image will scale up and down when resizing 
+    the browser window. Resize the browser window to see 
+    the effect.</p>
+    
+    <p>If the CSS width property is set to 100%, the image 
+    will be responsive and scale up and down:</p>
+    <img src="Images/img_girl.jpg" alt="" 
+    style="width:100%">
+
+    <p>If the max-width property is set to 100%, the image
+     will scale down if it has to, but never scale up to be 
+     larger than its original size:</p>
+    <img src="Images/img_girl.jpg" alt="" 
+    style=
+    "max-width: 100%;"
+    height="auto";
+    >
+
+<!--Show Different Images Depending on Browser Width-->
+<h2>Show Different Images Depending on Browser Width</h2>
+<p>Resize the browser width and the image will change at 
+    600px and 1500px.</p>
+
+
+    <picture>
+        <source
+        srcset="Images/smallflower.jpg"media="(max-width: 600px)"
+        >
+
+    </picture>
+</body>
+</html>
