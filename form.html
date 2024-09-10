@@ -33,6 +33,8 @@
    <!--Level button end-->
 
     <!--Radio Buttons start-->
+    <!--Radio buttons let a user select ONLY ONE of a 
+    limited number of choices-->
    <h2>Radio Buttons</h2>
    <p>Choose your favorite Web language:</p>
    
@@ -233,9 +235,130 @@ value="Kazi";>
       <br><br>
       
       <input type="submit">
-      
+
     </form>
     
+<hr><br>
+<h1>HTML Input Types</h1>
+<h3>Password field</h3>
+<p>The input type="password" defines a password field</p>
+
+<form action="/action_page.php">
+<label for="username">Username</label><br>
+
+<input type="text" id="username" name="username"><br>
+
+
+<label for="password">Password</label><br>
+<input type="password" name="password" id="password"><br><br>
+
+<input type="submit" value="submit"><!--If you omit the submit button's value attribute, the button will get a default text-->
+<input type="reset" value="Reset"><!--reset"> defines a reset button that will reset all form values to their default values-->
+</form>
+<p>The characters in a password field are masked 
+    (shown as asterisks or circles).</p>
+<hr><br>
+
+<h2></h2>
+<form action="/action_page.php">
+    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+    <label for="vehicle1"> I have a bike</label><br>
+    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+    <label for="vehicle2"> I have a car</label><br>
+    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+    <label for="vehicle3"> I have a boat</label><br><br>
+    <input type="submit" value="Submit">
+  </form> 
+
+
+  <pre>The &lt;input type="color"&gt; is used for input 
+    fields that should contain a color</pre>
+<hr><br>
+<h1>Number Field</h1>
+    
+<form action="/acttion_page.php">
+    <label for="quantity">Quantity (between 1 and 5):</label>
+    <input type="number" name="quantity" id="quantity" min="1" max="5">
+    <input type="submit" value="submit">
+</form>
+
+ <p><b>Numeric Steps</b>
+    Depending on browser support: Fixed steps will apply in 
+    the input field.</p>
+
+<form action="/action_page.php">
+<label for="quantity">Quantity</label>
+
+<input 
+type="number"; 
+name="quantity"; 
+id="quantity"; 
+min="0"; 
+max="100"; 
+step="10"; 
+value="30";>
+<input 
+type="submit";
+value="submit";>
+
+</form>
+
+<p><b>Range Field:</b>
+    Depending on browser support: The input type "range" can 
+    be displayed as a slider control.</p>
+<form action="/action_page.php"
+method="get">
+<label for="vol">Volume(between 0 and 50)</label>
+<input type="range" name="vol" id="vol"
+min="0" max="50">
+<input type="submit" value="submit">
+    
+</form>
+
+<hr><br>
+<h1>Input Type Search</h1>
+<p>The &lt;input type="search"> is used for search fields 
+    (a search field behaves like a regular text field).</p>
+
+<form action="action_page.php">
+    <label for="gsearch">Search Google</label>
+    <input type="search" name="gsearch" id="gsearch">
+    <input type="submit" value="submit">
+</form>
+<br><br>
+<hr>
+<h1>Telephone Field</h1>
+<p>The input type="tel" is used for input fields that should 
+    contain a telephone number:</p>
+<form action="action_page.php">
+<label for="phone">Enter a phone number</label><br><br>
+<input 
+type="tel" 
+name="phone" 
+id="phone" 
+placeholder="0123456789"
+pattern="[0-9]{5}[0-9]{6}"
+required><br>
+<small>Format: 0123456789</small><br>
+<input 
+style="padding: 8px; background-color: blueviolet;
+margin: 2px; color: aliceblue;"
+type="submit" value="submit">
+
+</form><br><br>
+
+<h1>Show a Time Input Control</h1>
+<p>The input type="time" allows the user to select a time 
+    (no time zone):</p>
+
+<form action="/action_page.php">
+<label for="appt">Select a time</label>
+<input type="time" name="appt" id="appt">
+<input type="submit" value="Submit">
+
+</form>
+
+
 
 </body>
 </html>
