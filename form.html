@@ -327,6 +327,7 @@ min="0" max="50">
 </form>
 <br><br>
 <hr>
+<!--Telephone Field-->
 <h1>Telephone Field</h1>
 <p>The input type="tel" is used for input fields that should 
     contain a telephone number:</p>
@@ -338,7 +339,8 @@ name="phone"
 id="phone" 
 placeholder="0123456789"
 pattern="[0-9]{5}[0-9]{6}"
-required><br>
+required
+><br>
 <small>Format: 0123456789</small><br>
 <input 
 style="padding: 8px; background-color: blueviolet;
@@ -360,5 +362,51 @@ type="submit" value="submit">
 
 
 
+<h1>The input multiple attributes</h1>
+<p>The multiple attribute specifies that the user is allowed 
+    to enter more than one value in an input field.</p>
+<form action="/action_page.php"></form>
+<label for="files">Select multiple File</label><br>
+<input type="file" name="files" id="files"
+multiple><br><br>
+<input type="submit">
+<hr><br>
+
+<h1>HTML Input form* Attributes</h1>
+<h2>The formaction Attribute</h2>
+<p>The input formaction attribute specifies the URL of the 
+file that will process the input when the form is 
+submitted.</p>
+<br>
+
+<h2>The formmethod Attribute</h2>
+<p>A form with two submit buttons. The first sends the 
+form-data with method="get". The second sends the form-data 
+with method="post":</p>
+<form action="/action_page.php">
+
+    <label for="fname">FirstName</label>
+    <input 
+    type="text";
+    id="fname";
+    name="fname"; 
+    ><br><br>
+    <label for="lname">LastName</label>
+    <input 
+    type="text" 
+    name="lname" 
+    id="lname"><br><br>
+    <input 
+    type="submit"; 
+    value="submit using GET";>
+    <input type="submit";
+    formaction="/action_page2.php";
+    formmethod="post";
+    formtarget="_blank";
+    value="Admin using POST";>
+
+
+    
+</form>
 </body>
 </html>

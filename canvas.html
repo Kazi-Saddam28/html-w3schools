@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+
+  
+</head>
+
+
+<body>
+<!--Revision needed-->
+<!--Revision needed-->
+<!--Revision needed-->
+<!--Revision needed-->
+ <h1>HTML Canvas Graphics</h1>
+ <canvas 
+ id="mcanvas";
+ width="200";
+ height="100";
+ style="border: 1px solid #000000;"
+ >
+</canvas> 
+
+
+<br><br>
+
+
+ <canvas 
+ id="myCanvas";
+ width="200";
+ height="100";
+ style="border: 1px solid #d3d3d3;"
+ >Your browser does not support the HTML canvas tag.
+ </canvas> 
+
+<br><br>
+
+ <!--Javascript for canvas-->
+ <h2>Draw a Line</h2>
+ <canvas 
+ id="yourCanvas";
+ width="200";
+ height="100";
+ style="border: 1px solid #d3d3d3;"
+ >
+ </canvas> 
+<script>
+    var c = document.getElementById("yourCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0,0);
+    ctx.lineTo(200,100);
+    ctx.stroke();
+</script>
+<!---->
+
+<br><br>
+
+
+
+<h2>Draw a Circle</h2>
+<canvas 
+ id="ourCanvas";
+ width="200";
+ height="100";
+ style="border: 1px solid #d3d3d3;"
+ >
+ </canvas> 
+<script>
+    var c = document.getElementById("ourCanvas");
+
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(95,50,40,0,2*Math.PI)
+
+    /*ctx.moveTo(0,0);
+    ctx.lineTo(200,100);*/
+
+    ctx.stroke();
+</script>
+
+<br><br>
+
+
+<h2>Draw a Text</h2>
+<canvas
+id="herCanvas"
+width="200"
+height="100"
+style="border: 1px solid #d3d3d3;">
+</canvas>
+
+<script>
+    var c = document.getElementById("herCanvas");
+    var ctx = c.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.fillText("Hello World",10,50);
+    /*ctx.strokeText("Hello World",10,50);*/
+</script>
+
+
+
+<h2>Draw Linear Gradient</h2>
+<canvas
+id="hisCanvas"
+width="200"
+height="100"
+style="border: 1px solid #d3d3d3;">
+</canvas>
+<script>
+    var c = document.getElementById("hisCanvas");
+    var ctx = c.getContext("2d");
+    //create gradient
+    var grd = ctx.createLinearGradient(0,0,200,0);
+    grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+    // Fill with gradient
+   ctx.fillStyle = grd;
+   ctx.fillRect(10,10,150,80);
+</script>
+
+
+
+
+
+<!--Revision needed-->
+<!--Revision needed-->
+<!--Revision needed-->
+<!--Revision needed-->
+</body>
+</html>
