@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML for CSS</title>
+
+    <style>
+        body{
+            background-color: lightblue;
+            background-image: url("/html-w3schools/Images/back2.jpeg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: 100%;
+/*The background-attachment property specifies whether the 
+background image should scroll or be fixed*/
+        }
+       div{
+        background-color: green;
+        
+       }
+       div.first{
+        opacity:0.1;
+       }
+       div.second{
+        opacity:0.3;
+       }
+       div.third{
+        opacity:0.6
+       }
+h5{
+    background-image:url("/html-w3schools/Images/back.jpg");
+}
+  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <!--google font-->
+
+ 
+ <!--font awesome-->
+
+ <script src="https://kit.fontawesome.com/6ce378119b.js" crossorigin="anonymous"></script>
+
+<!--Bootstrap Icons--> 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+
+<body>
+<h1>CSS color</h1>
+<h1 style="background-color: dodgerblue; 
+border:3px solid tomato;
+text-align: center;">Hello Bangladesh</h1>
+   
+ <h2 style="background-color: rgba(255, 99, 71, 0.8);"> 
+    CSS RGBA color</h2>   
+
+ <h3 style="background-color: #ffcc99;">
+    Hex Color(rrggbb)</h3>   
+
+ <h3 style="background-color: #fc9;">
+    Hex Color(rrggbb) 3 Digit Hex Value</h3>   
+
+<h1 style="background-color: hsl(0,100%,50%);">HSL Color</h1>
+<h1 style="background-color: hsla(0,100%,50%,0.5);
+">
+    HSLa Color: The alpha parameter is a number between 0.0 
+    (fully transparent) and 1.0 (not transparent at all)</h1>
+
+
+<!--CSS Backgrounds-->
+
+    <div class="first">
+        <h1>opacity 0.1</h1>
+      </div>
+      
+      <div class="second">
+        <h1>opacity 0.3</h1>
+      </div>
+      
+      <div class="third">
+        <h1>opacity 0.6</h1>
+      </div>
+      
+      <div>
+        <h1>opacity 1 (default)</h1>
+      </div>
+
+
+
+      <h5>CSS background-image
+        The background-image property specifies an image to use as the background of an element.
+        
+        CSS background-image
+The background-image property specifies an image to use as the background of an element.
+
+By default, the image is repeated so it covers the entire element.</h5>
+
+<!--CSS Border-->
+<h4 style="border-style:solid;
+border-width: 15px 5px;
+border-color: red;">Hello MR</h4>
+<h4 style="border-style:solid;
+border-width:  14px 3px 7px 20px;
+border-color: red green blue yellow;">Hello MR</h4>
+
+
+<!--CSS Border Sides-->
+<h4 style="border-top-style:dotted;
+border-right-style:solid;
+border-left-style:dashed;
+border-bottom-style: none;
+;">Hello World</h4>
+
+<h4 style="border-style:dotted solid dashed none;
+border-radius: 2px;
+">Hello World</h4>
+
+<!--CSS Margin-->
+<h4 style="border: 1px solid black;
+margin:auto">
+margin: 25px 50px 75px 100px;</h4>
+
+
+<!--CSS Padding-->
+
+<h4 style="border-style:solid;
+border-width:  14px 3px 7px 20px;
+border-color: red green blue yellow;
+padding: 25px 50px 75px 100px;">padding: 25px 50px 75px 100px;</h4>
+
+
+
+<!--CSS Height, Width and Max-width-->
+<div style="height: 200px;
+width: 50%;
+background-color: powderblue;">This div element has a 
+height of 200px and a width of 50%.</div>
+
+<br>
+<!--CSS Box Model-->
+<div style="width: 620px;
+height: 50px;
+padding: 10px;
+border: 5px solid gray;
+margin: 0;">
+  In CSS, the term "box model" is used when talking about 
+  design and layout.
+The CSS box model is essentially a box that wraps around 
+every HTML element. It consists of: content, padding, 
+borders and margins.
+</div>
+
+<!--CSS Outline-->
+<p
+style="margin: 30px;
+       background: yellow;
+       border: 1px solid black;
+       outline: 1px solid red;
+       outline-offset: 15px;"
+>This paragraph has an outline of 15px outside the border 
+  edge.</p>
+
+
+<!--CSS Text Spacing-->
+<h4
+style="text-indent: 5px;
+letter-spacing:5px;
+line-height:1.8;
+word-spacing:10px;
+white-space: nowrap;"
+>The text-indent property is used to specify the 
+  indentation of the first line of a text</h4>
+
+<!--Text shadow-->
+  <h1 style="color: white; text-shadow: 2px 2px red;"
+  >he text-shadow property adds shadow to text.
+
+    In its simplest use, you only specify the horizontal 
+    shadow (2px) and the vertical shadow (2px)</h1>
+
+<!--CSS Fonts-->
+<!--Font Fallbacks: Here, there are three font types: Tahoma, 
+Verdana, and sans-serif. The second and third fonts are 
+backups, in case the first one is not found.-->
+<h2 style="font-family:tahoma, verdana sans-serif;"
+>In CSS there are five generic font families: serif, 
+  sans-serif, monaspace, cursive, fantasy
+</h2>
+<hr><br>
+
+<!--CSS Font Style-->
+<!--40px/16=2.5em also used font-size: 100%; -->
+<h2 style="font-style: italic,oblique;
+font-weight: bold;
+font-size: 30px;"
+>The font-style property is mostly used to specify 
+  italic text.</h2>
+
+  <p style="font-size: 5vw;"
+  >The text size can be set with a vw unit, which 
+    means the "viewport width".</p>
+
+
+    <!--more practice neede, will do later-->
+<!--Google fonts-->
+<p style="font-family:sofia,sans-serif;"
+>Just add a special style sheet link in the &lt;head> 
+section and then refer to the font in the CSS.</p>
+
+
+<!--CSS Icons-->
+<!--To use the Font Awesome icons, go to fontawesome.com, 
+sign in, and get a code to add in the <head> section of your 
+  HTML page:
+
+<script src="https://kit.fontawesome.com/yourcode.js" 
+crossorigin="anonymous"></script> -->
+<p>Some Font Awesome icons:</p>
+<i class="fas fa-cloud"></i>
+<i class="fas fa-heart"></i>
+<i class="fas fa-car"></i>
+<i class="fas fa-file"></i>
+<i class="fas fa-bars"></i>
+
+<p>Styled Font Awesome icons (size and color):</p>
+<i class="fas fa-cloud" style="font-size:24px;"></i>
+<i class="fas fa-cloud" style="font-size:36px;"></i>
+<i class="fas fa-cloud" style="font-size:48px;color:red;"></i>
+<i class="fas fa-cloud" style="font-size:60px;color:lightblue;"></i>
+
+
+<h3>Bootstrap Icons</h3>
+<!--Bootstrap Icons-->
+<!--To use the Bootstrap glyphicons, add the following line 
+inside the <head> section of your HTML page:
+
+<link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/ -->
+<i class="glyphicon glyphicon-cloud"></i>
+<i class="glyphicon glyphicon-remove"></i>
+<i class="glyphicon glyphicon-user"></i>
+<i class="glyphicon glyphicon-envelope"></i>
+<i class="glyphicon glyphicon-thumbs-up"></i>
+
+
+<!--Google Icons-->
+<!--To use the Google icons, add the following line inside 
+the <head> section of your HTML page:
+
+<link rel="stylesheet" href=
+"https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+</body>
+</html>
