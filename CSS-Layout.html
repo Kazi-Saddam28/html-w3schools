@@ -2,7 +2,7 @@
 <html>
 <head>
 <style>
-div {
+.divx {
   border: 3px solid #4CAF50;
   padding: 5px;
 }
@@ -20,6 +20,85 @@ div {
   clear: both;
   display: table;
 }
+
+*{
+  box-sizing: border-box;
+}
+.box{
+float: left;
+width: 33.33%;
+padding: 50px;
+}
+.img-container{
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.flex-container{
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: dodgerblue;
+}
+
+/*list*/
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li{
+  float: left;
+}
+li a{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover{
+  background-color: #111;
+}
+.active{
+  background-color:red;
+}
+/*Web Layout Example*/
+body{
+  background-color: white;
+}
+.header, .footer{
+  background-color: grey;
+  color: white;
+  padding: 15px;
+}
+.column{
+  float: left;
+  padding: 15px;
+}
+.menu{
+  width: 25%;
+}
+.content{
+  width: 75%;
+}
+.menu ul{
+  list-style-type:none ;
+  margin: 0;
+  padding: 0;
+}
+.menu li{
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: #33b5e5;
+  color: #ffffff;
+
+}
+.menu li:hover{
+  background-color: #0099cc;
+}
 </style>
 </head>
 <body>
@@ -28,7 +107,7 @@ div {
 
 <p>This image is floated to the right. It is also taller than the element containing it, so it overflows outside of its container:</p>
 
-<div>
+<div class="divx">
   <img class="img1" src="/html-w3schools/Images/pineapple.jpg" alt="Pineapple" width="170" height="170">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
 </div>
@@ -36,9 +115,111 @@ div {
 <h2 style="clear:right">With New Modern Clearfix</h2>
 <p>Add the clearfix hack to the containing element, to fix this problem:</p>
 
+<div class="divx">
 <div class="clearfix">
   <img class="img2" src="/html-w3schools/Images/pineapple.jpg" alt="Pineapple" width="170" height="170">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+</div></div>
+
+
+<!--CSS Layout - Float Examples-->
+<h1>Grid of Boxes / Equal Width Boxes</h1>
+<h2>Grid of Boxes</h2>
+<p>Float boxes side by side:</p>
+
+<div class="clearfix">
+  <div class="box" style="background-color: #bbb;">
+    <p>Some text inside the box.</p>
+  </div>
+  
+  <div class="box" style="background-color: #ccc;">
+    <p>Some text inside the box.</p>
+  </div>
+
+  <div class="box" style="background-color: #ddd;">
+    <p>Some text inside the box.</p>
+  </div>
+</div>
+
+<h2>Images Side by Side</h2>
+<p>Float images side by side:</p>
+<div class="clearfix">
+<div class="img-container">
+<img src="/html-w3schools/Images/img_5terre.jpg" 
+alt="Italy"
+style="width: 100%;">
+</div>
+<div class="img-container">
+  <img src="/html-w3schools/Images/img_forest.jpg" 
+  alt="Forest"
+  style="width: 100%;">
+</div>
+
+<div class="img-container">
+  <img src="/html-w3schools/Images/img_mountains.jpg" 
+  alt="Forest"
+  style="width: 100%;">
+</div>
+
+</div>
+
+<h1>Equal Height Boxes</h1>
+<h2>Using Flexbox to create flexible boxes:</h2>
+
+<div class="flex-container">
+  <div class="box1">Box 1 - This is some text to make sure 
+    that the content gets really tall. This is some text 
+    to make sure that the content gets really tall.</div>
+  <div class="box1">Box 2 - My height will follow Box 1.
+  </div>
+</div>
+
+<h1>Navigation Menu</h1>
+
+<ul>
+  <li>
+    <a href="#home" class="active">Home</a>
+  </li>
+  <li>
+    <a href="#news">News</a>
+  </li>
+  <li>
+    <a href="#Contact">Contact</a>
+  </li>
+  <li>
+    <a href="#about">About</a>
+  </li>
+</ul>
+
+<br><br><br><br>
+
+<!--Web Layout Example-->
+
+<div class="header">
+  <h1>Chania</h1>
+</div>
+<div class="clearfix">
+
+  <div class="column menu">
+    <ul>
+      <li>The Flight</li>
+      <li>The City</li>
+      <li>The Island</li>
+      <li>The Food</li>
+    </ul>
+  </div>
+  <div class="column content">
+<h1>The City</h1>
+    <p>Chania is the capital of the Chania region on the 
+      island of Crete. The city can be divided in two 
+      parts, the old town and the modern city.</p>
+    <p>You will learn more about web layout and responsive 
+      web pages in a later chapter.</p>
+  </div>
+
+</div>
+<div class="footer">
+<p>Footer Text</p>
 </div>
 
 </body>
