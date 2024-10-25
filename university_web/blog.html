@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ULAB University Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,
+wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+<script src="https://kit.fontawesome.com/2709aa6956.js" 
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <section class="sub-header">
+<nav>
+    <a href="index.html"><img src="images/logo.jpeg" alt=""></a>
+
+<div class="nav-links" id="navLinks">
+     <i class="fa fa-times" onclick="hideMenu()"></i>
+ <ul>
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+    <li><a href="course.html">COURSE</a></li>
+    <li><a href="blog.html">BLOG</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+ </ul>
+</div>
+
+<i class="fa fa-bars" onclick="showMenu()"></i>
+</nav>
+<h2>Our Certificate & Programs for 2024</h2>
+ </section>
+
+
+ <!-- --------blog  page content--------- -->
+<section class="blog-content">
+    <div class="row">
+        <div class="blog-left">
+<img src="images/certificate.jpg" alt="">
+<h2>Our Certificate & Programs for 2024</h2>
+<p>ULAB YOUR University, ULAB YOUR University.ULAB YOUR University, 
+    ULAB YOUR UniversityULAB YOUR University, 
+    ULAB YOUR UniversityULAB YOUR University, <br>
+     ULAB YOUR UniversityULAB YOUR University, 
+     ULAB YOUR UniversityULAB YOUR University, 
+     ULAB YOUR UniversityULAB YOUR University, 
+     ULAB YOUR University</p>
+<div class="comment-box">
+    <h3>
+        Leave Comment
+    </h3>
+    <form action="" class="comment-form">
+        <input type="text" placeholder="Enter Name">
+        <input type="email" placeholder="Enter Email">
+        <textarea nrow="5" placeholder="Your Comment"></textarea>
+        <button type="submit" class="hero-btn red-btn">Post Comment</button>
+    </form>
+</div>
+        </div>
+        <div class="blog-right">
+        <h3>Post Category</h3>
+        <div>
+            <span>Business Analytics</span>
+            <span>200</span>
+        </div>
+        <div>
+            <span>Computer Science And Enginnering</span>
+            <span>150</span>
+        </div>
+        <div>
+            <span>Electrical and Electronic Enginnering</span>
+            <span>100</span>
+        </div>
+        <div>
+            <span>Media Studies and Journalism</span>
+            <span>140</span>
+        </div>
+        <div>
+            <span>Bangla</span>
+            <span>50</span>
+        </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- --------footer---------- -->
+<section class="footer">
+<h4>About Us</h4>
+<p>ULAB YOUR University, ULAB YOUR University</p>
+
+<div class="icons">
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-linkedin"></i>
+</div>
+<p>Made with <i class="fa fa-heart-o "></i> by Easy Tutorials</p>
+</section>
+
+
+
+
+
+
+
+
+<!-- ----Javascript for toggle menu----- -->
+    <script>
+        var navLinks= document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right ="0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
