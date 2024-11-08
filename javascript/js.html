@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Introduction</title>
+    <!-- Demo JavaScript in Head -->
+     <script>
+        function myFunction(){
+            document.getElementById('demmu').innerHTML="Paragraph changed.";
+        }
+     </script>
+<script src="index.js"></script>
+</head>
+
+
+<body>
+    <h2>What Can JavaScript Do?</h2>
+
+<P id="demo">Javascript can change HTML content</P>
+<button type="button" onclick='document.getElementById("demo").innerHTML=
+"Hello JavaScript!"'>
+Click Me
+</button>
+
+
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case JavaScript changes the value of the src (source) 
+    attribute of an image.</p>
+
+    <button onclick="document.getElementById('myImage').
+    src='imagejs/pic_bulbon.gif'">Turn on the light</button>
+
+    <img id="myImage" src="Imagejs/pic_bulbon.gif" style="width:100px">
+    
+    <button onclick="document.getElementById('myImage').
+    src='imagejs/pic_bulboff.gif'">Turn off the light</button>
+
+<!-- JavaScript can change the style of an HTML element. -->
+ <p id="demoo">JavaScript can change the style of an HTML element.</p>
+<button type="button" 
+onclick="document.getElementById('demoo').style.fontSize='35px'">
+Click Me!
+</button>
+<br><hr>
+<!-- JavaScript can hide HTML elements. -->
+<p id="demmo">JavaScript can hide HTML elements.</p>
+<button type="button" 
+onclick="document.getElementById('demmo').style.display='none'">
+Click Me
+</button>
+<br>
+<hr>
+<!-- javaScript can show hidden HTML elements. -->
+ <p id="demu" style="display: none;">Hello JavaScript</p>
+ <button type="button" 
+ onclick="document.getElementById('demu').style.display='block'">
+Click Me
+</button>
+<hr>
+<!-- Demo JavaScript in Head -->
+<h2>Demo JavaScript in Head</h2>
+<p id="demmu">A Paragraph</p>
+<button type="button" onclick="myFunction()">Try It</button>
+<hr>
+<!-- Demo JavaScript in Body -->
+<p id="demmuu">A Paragraph</p>
+<button type="button" onclick="weFunction()">Try It</button>
+<script>
+    function weFunction(){
+document.getElementById('demmuu').innerHTML="Paragraph changed.";
+    }
+</script>
+<hr>
+<h2>External JavaScript</h2>
+
+<p id="demmoo">A Paragraph.</p>
+<button type="button" onclick="jsFunction()">Click Me</button>
+<br><hr>
+
+<!-- Writing into an HTML element, using innerHTML. -->
+<p id="dmm"></p>
+<script>
+    document.getElementById('dmm').innerHTML = 5+6;
+</script>
+<hr><br>
+<!-- Writing into the HTML output using document.write(). -->
+ <script>
+    document.write(15+6);
+ </script>
+ <hr><br>
+
+ <button type="button" onclick="document.write(5+6)">
+    Try it
+ </button>
+ <hr><br>
+<!-- Writing into an alert box, using window.alert(). -->
+ <script>
+    // window.alert(5+6);
+ </script>
+<hr><br>
+
+<!-- Writing into the browser console, using console.log(). -->
+<script>
+    // alert(5+6)
+</script>
+<hr><br>
+<script>console.log(5+6)</script>
+<hr><br>
+<!-- can call the window.print() method in the browser to print the 
+     content of the current window. -->
+<button onclick ="window.print()">
+Print This Page
+</button>
+<hr><br>
+<p>A <b>JavaScript program</b> is a list of <b>statements</b> 
+    to be executed by a computer.</p>
+
+<!-- JavaScript Statements -->
+<p id="dmmoo"></p>
+<script>
+let x, y, z;
+    x=5;
+    y=6;
+    z= x+y;
+document.getElementById('dmmoo').innerHTML = "The value of Z is = "+ z +".";
+</script>
+<hr><br>
+
+<p id="ddmm"></p>
+<script>
+document.getElementById('ddmm').innerHTML="Hello Raha.";
+</script>
+<hr><br>
+
+<!-- Semicolons separate JavaScript statements. -->
+<p id="demo1"></p>
+<script>
+    let a,b,c; a = 5; b=6; c = a+b;
+    document.getElementById("demo1").innerHTML = c ;
+</script>
+<hr><br>
+
+<!-- JavaScript ignores multiple spaces. You can add white space to your 
+     script to make it more readable. -->
+
+     <p>JavaScript code blocks are written between { and }</p>
+
+<button type="button" onclick="myFunc1()">
+Click me!
+</button>
+
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+    function myFunc1(){
+        document.getElementById('demo2').innerHTML = "Hello Raha";
+        document.getElementById('demo3').innerHTML = "Hello Zaman";
+    }
+</script>
+<hr><br>
+
+<!-- JavaScript Numbers -->
+<p>Number can be written with or without decimals.</p>
+<p id="demo4"></p>
+<script>
+    document.getElementById('demo4').innerHTML = 10.50;
+</script>
+<hr><br>
+
+<p>In this example, x is defined as a variable.
+    Then, x is assigned the value of 6:</p>
+
+<p id="demo5"></p>
+
+<script>
+let p;
+ p = 8;
+document.getElementById("demo5").innerHTML = p;
+</script>
+<hr><br>
+
+
+<!-- JavaScript Statements -->
+<P id="demo6"></P>
+<script>
+  let xx,yy,zz;
+  xx=5; yy=6; zz=4;  
+  document.getElementById('demo6').innerHTML="The Value of Z is " +z+ ".";
+</script>
+
+<p>JavaScript code blocks are written between { and }</p>
+<button type="button" 
+onclick="myFunction2()">Click Me! 
+</button>
+
+<p id="demo7"></p>
+<p id="demo8"></p>
+
+
+<script>
+    function myFunction2(){
+        document.getElementById("demo7").innerHTML = "Hello Raha!";
+        document.getElementById("demo8").innerHTML = "How are You?";
+    }
+</script>
+<hr><br>
+<p id="demo9"></p>
+<p id="demo10"></p>
+<p id="demo11"></p>
+<script>
+    var x1;
+    x1=5;
+    document.getElementById('demo9').innerHTML = (5+6)*10;
+    document.getElementById('demo10').innerHTML = x*10;
+    document.getElementById('demo11').innerHTML = "John"+ " " + "Doe";
+</script>
+<br><hr>
+
+<p id="demo12"></p>
+<script>
+    let x2, y2;
+    x2= 5+6;
+    y2=x2*10; //110
+    document.getElementById('demo12').innerHTML = y2;
+</script>
+<hr><br>
+
+<!-- All JavaScript identifiers are case sensitive.  -->
+<p id="demo13"></p>
+<script>
+    let lastName, Lastname;
+    lastName = 'Raha';
+    lastname = 'Zaman';
+    document.getElementById('demo13').innerHTML = lastName;
+</script>
+<hr><br>
+<h1 id="myH"></h1>
+<p id="myP"></p>
+<script>
+//change Heading:
+document.getElementById('myH').innerHTML = "Javascript Comment";
+
+//Change Paragraph
+document.getElementById('myP').innerHTML ="My First Paragraph";
+</script>
+<br><hr><br>
+
+<!-- JavaScript Variables -->
+<p>In this example, x, y, and z are undeclared. <br>
+    They are automatically declared when first used.</p>
+<p id="demo14"></p>
+<script>
+    x3 = 5;
+    y3 = 6;
+    z3 = x+y;
+document.getElementById('demo14').innerHTML = "The Value of z is: " + z;
+
+</script>
+<hr><br>
+
+
+<p>It is considered good programming practice to always declare variables 
+    before use.</p>
+
+<p id="demo15"></p>
+<script>
+    var x4=5;
+    var y4=6;
+    var z4=x+y;
+document.getElementById('demo15').innerHTML = 'The Value of z is: ' +z;
+
+</script>
+<hr><br>
+<p id="demo16"></p>
+<script>
+    const price1 =5;
+    const price2= 6;
+    let total= price1+price2;
+    document.getElementById('demo16').innerHTML = "The Toatl is: " +total;
+</script>
+<hr><br>
+
+<!-- One Statement, Many Variables -->
+<p id="demo17"></p>
+<script>
+    // A declaration can span multiple lines:
+    let person2 = 'John Doe', 
+    carName = 'Volvo', 
+    price= 200;
+    document.getElementById('demo17').innerHTML = carName;
+</script>
+<hr><br>
+
+
+
+<p>The result of adding 5+ 2+ 3 is: </p>
+<p id="demo18"></p>
+
+<script>
+let x5= 5 +2 +3;
+document.getElementById('demo18').innerHTML = x5;
+</script>
+<hr><br>
+
+<p>The Result of adding 2+ 3+ "5" is: </p>
+<p id="demo19"></p>
+<script>
+    let x6= 2+ 3+ "5";
+    document.getElementById('demo19').innerHTML = x6;
+</script>
+<hr><br>
+<!-- <h2>JavaScript Hoisting</h2> -->
+<p>With <b>var</b>, you can use a variable before it is declared:</p>
+<p id="demo20"></p>
+<script>
+    carName1 = "Volvo";
+    document.getElementById('demo20').innerHTML = carName;
+    var carName1;
+</script>
+<hr><br>
+
+<h1>JavaScript const</h1>
+
+
+<!-- A variable defined with the const keyword cannot be reassigned: -->
+<p id="demo21"></p>
+<script>
+try {
+  const PI = 3.141592653589793;
+  PI = 3.14;
+}
+catch (err) {
+  document.getElementById("demo21").innerHTML = err;
+}
+</script>
+<hr><br>
+
+<!-- Constant Arrays -->
+<p id="demo22"></p>
+<script>
+    //create an Array:
+    const cars1 = ["Saab ", "Volvo ", "BMW "];
+    //Change an element:
+    cars1[0]=" Toyota";
+//add an element
+cars1.push("Audi");
+
+//Displsy the array":
+document.getElementById("demo22").innerHTML = cars1;
+
+</script>
+<hr><br>
+
+<!-- But you can NOT reassign the array: -->
+<p id="demo23"></p>
+<script>
+    try{
+        const cars2 = ["Saab", "Volvo", "BMW"];
+        cars2 = ["Toyota", "Volvo", "Audi"];
+    }
+    catch(err1){
+        document.getElementById("demo23").innerHTML = err1;
+    }  
+</script>
+<hr><br>
+
+<!-- Declaring a constant object does NOT make the objects 
+ properties unchangeable: -->
+<p id="demo24"></p>
+<script>
+    //create an object:
+    const car3 = {type: "Fiat",
+        model:"500",
+        color:"white"
+    };
+    //change a property:
+    car3.color = "red";
+    //Add a property:
+    car3.owner =  'Johnson';
+    //Display the proper:
+    document.getElementById("demo24").innerHTML = "Car owner is " 
+    +car3.owner;
+</script>
+<hr><br>
+
+
+<h1>JavaScript Operators</h1>
+<!-- JavaScript String Comparison -->
+<p>All conditional operators can be used on both numbers and strings.</p>
+<p id="demo25"></p>
+<script>
+    let text1 = "A";
+    let text2 = "B";
+    let result =text1 < text2;
+
+document.getElementById("demo25").innerHTML = "Is A less than B? " +result;
+</script>
+<hr><br>
+
+<!-- The exponentiation operator (**) raises the first operand to the 
+ power of the second operand. -->
+
+<p id="demo26"></p>
+<p id="demo27"></p>
+<script>
+    let x7 =5;
+    document.getElementById("demo26").innerHTML ="x7 ** 2=  " +x7 ** 2;
+    document.getElementById("demo27").innerHTML = 
+    "Math.pow(x7,3)=  " +Math.pow(x7,3);
+</script>
+<br><hr>
+<!-- JavaScript Strings -->
+<p id="demo28"></p>
+<script>
+    let answer1 ="It's alright.";
+    let answer2 = 'He is called "Johnny".';
+    let answer3 = 'He is called "Johnny".';
+    document.getElementById('demo28').innerHTML =
+    answer1 + "<br>" +
+    answer2 + "<br>" +
+    answer3;
+</script>
+<hr><br>
+
+<h1>JavaScript Objects</h1>
+<p id="demo29"></p>
+<script>
+    const person1={
+        firstName : "John",
+        lastName : "Doe",
+        age : 50,
+        eyeColor :"blue"
+    };
+    document.getElementById('demo29').innerHTML =
+    person1.firstName + " is " +
+    person1.age + " years old.";
+</script>
+
+<hr><br>
+
+
+<h1>JavaScript Data Types</h1>
+<!-- Exponential Notation -->
+<p id="demo30"></p>
+<script>
+    let y8= 123e5;
+    let z8=123e-5;
+    document.getElementById('demo30').innerHTML= y8+ "<br>"+z8;
+</script>
+
+
+
+<h1>JavaScript Functions</h1>
+<p id="demo31"></p>
+<script>
+    function myFunction3(p1, p2){
+        return p1*p2;
+    }
+    let result1 = myFunction3(4,3);
+    document.getElementById('demo31').innerHTML = result1;
+</script>
+<hr>
+
+
+<p id="demo32"></p>
+<script>
+    let x8 = myFunction4(4,3);
+    document.getElementById('demo32').innerHTML=x8;
+
+    function myFunction4(a, b){
+        return a * b;
+    }
+</script>
+<hr>
+<!-- Convert Fahrenheit to Celsius: -->
+
+<p id = "demo33"></p>
+<script>
+    function toCelsius(f){
+        return (5/9)*(f-32);
+    }
+    let value = toCelsius(77);
+    document.getElementById('demo33').innerHTML = value;
+</script>
+<hr><br>
+
+
+
+<h1>Creating JavaScript Objects</h1>
+<!-- Using an Object Literal -->
+
+<p id="demo34"></p>
+<script>
+    //create an object
+    const person4 = {firstName4:"John",
+        lastName4: "Doe", age4:50,
+        eyeColor4:"blue"};
+
+    document.getElementById('demo34').innerHTML = person4.firstName4 +
+    " is " +person4.age4 + " years old";
+</script>
+<hr><br>
+
+
+<h2>Creating JavaScript Objects</h2>
+<h3>Using an Object Literal</h3>
+<p id="demo35"></p>
+<script>
+    //Create an empty Object
+    const person5={};
+    //Add properties
+    person5.firstName5 = "John";
+    person5.lastName5 ="Doe";
+    person5.age5 = 50;
+    person5.eyeColor5 = "blue";
+
+    //Display Data from Object
+    document.getElementById('demo35').innerHTML = person5.firstName5 + " is "
+    + person5.age5 + " years old.";
+</script>
+
+<hr><br>
+
+
+
+<h2>Creating Javascript object Using the new Keyword</h2>
+<p id="demo36"></p>
+<script>
+    //create an object
+    const person6 = new Object();
+    person6.firstName6 = "John";
+    person6.lastName6 = "Doe";
+    person6.age6 = 50;
+    person6.eyeColor6 ="blue";
+
+    //Display Object Content
+    document.getElementById('demo36').innerHTML = person6.firstName6 + " is "
+    + person6.age6 + " years old.";
+
+</script>
+<hr><br>
+
+
+<!-- There are two ways to access a property: object.property or 
+ object["property"] The last name is Doe -->
+
+<p id="demo37"></p>
+<script>
+    //Create an Object:
+    const person7 = {
+        firstName7 : "John",
+        lastName7 : "Doe",
+        id7 : 5566
+    };
+    //Display lastName7 from the Object:
+    document.getElementById("demo37").innerHTML = "The last name is: "+
+    person7["lastName7"];
+</script>
+<hr><br>
+
+<h3>Object Methods</h3>
+<p>A method is a function definition stored as a property value.</p>
+<p id="demo38"></p>
+<script>
+    const person8 ={
+        firstName8: "John",
+        lastName8: "Doe",
+        id: 5566,
+        fullName8: function(){
+            return this.firstName8 + " "+ this.lastName8;
+        }
+    };
+    document.getElementById('demo38').innerHTML = person8.fullName8();
+</script>
+
+
+<hr><br>
+<h3>Objects are Mutable</h3>
+<p>Changes to a copy of an object will also change the original object:</p>
+<p id="demo39"></p>
+<script>
+    //create an object
+    const person9 = {
+        firstName9:"John",
+        lastName9:"Doe",
+        age9:50,
+        eyeColor9: "blue"
+    };
+    //Create a Copy
+    const x9 = person9;
+    //Change Age
+    x9.age9 = 10;
+    document.getElementById('demo39').innerHTML = person9.firstName9 +
+    " is " + person9.age9 + " years old. ";
+</script>
+<br><hr>
+
+<h1>JavaScript Object Properties</h1>
+<h3>Accessing a Property with an Expression</h3>
+<p id="demo40"></p>
+<script>
+    const person10 = {
+        firstName10: "John",
+        lastName10: "Doe",
+        age10: 50
+    };
+    let x10 = "firstName10";
+    let y10 = "age10";
+//<!-- Deleting a Property -->
+ delete person10.age10;
+ //delete person10["y10"];
+
+    document.getElementById('demo40').innerHTML = person10[x10] + " is " +
+    person10[y10] + " years old.";
+</script>
+<hr><br>
+
+<h3></h3>
+<p id="demo41"></p>
+<script>
+    //Create nested Object
+    const myObj11 = {
+        name11 : "John",
+        myCars11 : {
+            car9: "Ford",
+            car10:"BMW",
+            car11:"Fiat"
+        }
+    }
+
+    let p10 = "myCars11";
+    let p11 = "car10";
+    document.getElementById('demo41').innerHTML = myObj11[p10][p11];
+</script>
+<hr><br>
+
+<!-- Using JavaScript Methods -->
+<p id="demo42"></p>
+<script>
+    const person12 ={
+        firstName12: 'John',
+        lastName12: "Doe",
+        id12: 5566
+    };
+
+    //add a method
+    person12.name12=function(){
+        return (this.firstName12 + " " +
+            this.lastName12).toUpperCase();
+    };
+
+    //Display Object Data
+    document.getElementById("demo42").innerHTML = "My friend's name is "
+    + person12.name12();
+</script>
+<hr><br>
+
+<h1>JavaScript Display Objects</h1>
+<p id="demo43"></p>
+<script>
+    //Create an Object
+    const person13 = {
+        name13 : "John",
+        age13: 30,
+        city13: "New York"
+    };
+    //Build a Text
+    let text13 = "";
+    for(let x13 in person13){
+        text13 += person13[x13] + " ";
+    };
+
+//display the tex
+document.getElementById('demo43').innerHTML = text13;
+</script>
+<hr><br>
+
+
+<!-- Object.values() creates an array from the property values: -->
+<p id="demo44"></p>
+<script>
+    //Create an Object
+    const person14 ={
+        name14: "John",
+        age14: 30,
+        city14: "New York"
+    };
+
+    //Create an array
+    const myArray14 = Object.values(person14);
+
+    //Display the array
+    document.getElementById('demo44').innerHTML = myArray14
+</script>
+<hr><br>
+
+
+<!-- Object.entries() makes it simple to use objects in loops: -->
+<p id="demo45"></p>
+<script>
+    const fruits15 = {Bananas:300, Oranges:200, Apples:500};
+    let text15= "";
+    for (let[fruit15, amount15]
+    of Object.entries(fruits15)){
+        text15 += fruit15 + ": "+ amount15 + "<br>";
+    }
+    document.getElementById('demo45').innerHTML =text15;
+</script>
+<hr><br>
+
+
+<h3>Display Properties with JSON</h3>
+<p id="demo46"></p>
+<script>
+    //Create an Object
+    const person16 = {
+        name: "John",
+        age:50,
+        city:" New York"
+    };
+
+    //Display JSON
+    document.getElementById('demo46').innerHTML = JSON.stringify(person16);
+</script>
+<hr><br>
+
+<h1>JavaScript Object Constructors</h1>
+
+<p id="demo47"></p>
+<script>
+    //Constructor Function for Person object
+    function Person17(first,last,age,eye){
+        this.firstName17 = first;
+        this.lastName17 = last;
+        this.age17 =age;
+        this.eyeColor17 = eye;
+    }
+//Create a Person object
+const myFather17 =new Person17("John", "Doe", 50, "blue");
+
+//Display age
+document.getElementById('demo47').innerHTML = "My Father is "
++myFather17.age17+ ".";
+
+</script>
+<hr><br>
+
+<h3>Adding a Method to an Object</h3>
+<p id="demo48"></p>
+<script>
+    //Constructor function for Person Object
+    function Person18 (first,last,age,eye){
+        this.firstName18 = first;
+        this.lastName18 = last;
+        this.age18 = age;
+        this.eyeColor18 = eye;
+    }
+    //Create 2 person objects
+    const myFather18 = new Person18 ("Kazi","Zamadul", 90, "blue");
+    const myMother18 = new Person18('Rabeya', "Khatun", 70, "Green");
+
+    //Add a Name method
+    myMother18.changeName18 = function(name18){
+        this.lastName18 =name18;
+    }
+
+
+    //Change Name
+    myMother18.changeName18("Doe");
+
+    //Display fullName
+
+    document.getElementById("demo48").innerHTML ="My Mother's last name is "
+    + myMother18.lastName18;
+
+</script>
+<hr><br>
+
+
+<h1>JavaScript Events</h1>
+<button  onclick = "document.getElementById('demo49').innerHTML = Date()">
+    The Time is?
+   </button>
+
+<p id="demo49"></p>
+<br>
+<!-- the code changes the content of its own element 
+ (using this.innerHTML): -->
+<p id="demo50"></p>
+<button onclick = "this.innerHTML=Date()">
+    The Time is?
+</button>
+<hr><br>
+
+
+<button onclick="displayDate()">
+    The Time Is?
+</button>
+<script>
+    function displayDate(){
+        document.getElementById('demo51').innerHTML = Date();
+    }
+</script>
+<p id="demo51"></p>
+<hr><br>
+
+
+
+<h1>JavaScript Strings</h1>
+<h3>String Length</h3>
+<p id="demo52"></p>
+<script>
+    let text19 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    document.getElementById("demo52").innerHTML = text19.length;
+</script>
+<hr>
+
+<!-- \" inserts a double quote in a string: -->
+<p id="demo53"></p>
+<script>
+    let text20 = "We are the so-called \"Vikings\" from the \\ north.";
+    document.getElementById('demo53').innerHTML=text20
+</script>
+<hr>
+
+
+<h1>JavaScript String Methods</h1>
+
+
+
+
+</body>
+</html>
