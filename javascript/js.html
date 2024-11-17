@@ -830,6 +830,739 @@ document.getElementById('demo47').innerHTML = "My Father is "
 
 
 <h1>JavaScript String Methods</h1>
+<p id="demo54"></p>
+<p id="demo55"></p>
+<script>
+    var text21 ="HELLO WORLD";
+    document.getElementById('demo54').innerHTML =text21.charAt(0);
+    document.getElementById('demo55').innerHTML =text21.charCodeAt(0);
+</script>
+<!-- <hr>The trim() method removes whitespace from 
+ both sides of a string: -->
+<p id="demo56"></p>
+<script>
+    let text22 ="     Hello World!     ";
+    let text23 =text22.trim();
+
+    document.getElementById("demo56").innerHTML=
+    "Length of text22 = "+ text22.length +
+     "<br>Length text23 = " +text23.length;
+</script>
+<hr>
+<!-- String method need to studay again -->
+<h1>JavaScript String Search</h1>
+<!-- The indexOf() method returns the index (position) of the first 
+ occurrence of a string in a string, or it returns -1 if the string is 
+ not found: -->
+<pA id="demo57"></pA>
+<script>
+    let text24 = "Please locate where 'locate' occurs!";
+    let index = text24.indexOf("locate");
+    document.getElementById('demo57').innerHTML = index;
+</script>
+<hr>
+
+<h3>ES2020 intoduced the string method matchAll().</h3>
+<p id="demo58"></p>
+<script>
+   let text25 = 
+   "I love cats. Cats are very easy to love. Cats are very popular." 
+   const iterator25 = 
+   text25.matchAll(/Cats/gi);
+   document.getElementById('demo58').innerHTML =
+   Array.from(iterator25);
+</script>
+<hr>
+
+<p>Variable Substitutions
+    Template Strings allow variables in strings:</p>
+<p id="demo59"></p>
+<script>
+    let firstName26 = "John";
+    let lastName26 ="Doe";
+
+    let text26 = `Welcome ${firstName26}, ${lastName26}!`;
+
+    document.getElementById("demo59").innerHTML = text26;
+</script>
+<hr><br>
+<!--  -->
+
+<p id="demo60"></p>
+
+<script>
+let header27 = "Template Strings";
+let tags27 = ["template strings", "javascript", "es6"];
+
+let html27 = `<h2>${header27}</h2><ul>`;
+
+for (const x27 of tags27) {
+  html27 += `<li>${x27}</li>`;
+}
+
+html27 += `</ul>`;
+document.getElementById("demo60").innerHTML = html27;
+</script>
+<!-- Need to study again[JS String Templates] -->
+ <hr><br>
+
+
+<h1>JavaScript Numbers</h1>
+<p>JavaScript has only one type of number. 
+Numbers can be written with or without decimals.</p>
+<!-- Integers (numbers without a period or exponent notation) 
+ are accurate up to 15 digits. -->
+<p id="demo61"></p>
+<script>
+    let x28 = 999999999999999;
+    let y28 = 9999999999999999;
+    document.getElementById('demo61').innerHTML = x28 + "<br>" +y28
+</script>
+<hr>
+<p>Floating point arithmetic is not always 100% accurate.</p>
+<!-- Floating point arithmetic is not always 100% accurate. -->
+ <p id="demo62"></p><hr>
+ <!-- To solve the problem above, it helps to multiply and divide: -->
+  <p id="demo63"></p>
+<script>
+    let x29 = 0.2+ 0.1;
+    document.getElementById("demo62").innerHTML = "0.2 + 0.1 = " +x29;
+    let x30 = (0.2*10 + 0.1*10) /10;
+    document.getElementById('demo63').innerHTML = "0.2 +0.1 = " +x30;
+</script>
+<hr>
+<p>A common mistake is to expect this result to be 30: </p>
+<p id="demo64"></p>
+<script>
+    var x31 = 10;
+    var x32 = 20;
+
+    document.getElementById("demo64").innerHTML = 
+    "The Result is: " +x31 +x32;
+</script>
+<hr>
+
+<p>A common mistake is to expect this result to be 102030:</p>
+<p id="demo65"></p>
+<script>
+    let x33 = 10;
+    let y33 = 20;
+    let z33 = "30";
+    let result33 = x33 + y33+ z33;
+
+    document.getElementById('demo65').innerHTML ='Result: ' +result33;
+</script>
+<hr>
+
+<p>JavaScript will try to convert strings to numbers when dividing 
+    and Multiplaying:</p>
+<p id="demo66"></p>
+<script>
+    let x34 = "100";
+    let y34 = "10";
+    let z34 = x34/y34;
+    let z35 = x34*y34;
+
+    document.getElementById("demo66").innerHTML =
+    "x34/y34: " +z34 + "<br>"  + "x34*y34: "+z35;
+</script>
+<hr>
+
+<p>JavaScript will try to convert strings to numbers when 
+    subtracting but not adding:</p>
+<p id="demo67"></p>
+<script>
+    let x36 = "100";
+    let y36 = "10";
+    let z36 = x34-y34;
+    let z37 = x34+y34;
+
+    document.getElementById("demo67").innerHTML =
+    "x36 - y36: " +z36 + "<br>"  + "x36 + y36: " +z37;
+</script>
+
+<hr>
+<p>A number divided by a non-numeric string becomes NaN (Not a Number):</p>
+<p id="demo68"></p>
+<script>
+    document.getElementById("demo68").innerHTML= 100/"Apple";
+</script>
+<hr>
+
+<p>A number divided by a numeric string becomes a number:</p>
+<p id="demo69"></p>
+<script>
+    document.getElementById("demo69").innerHTML= 100/"10";
+</script>
+<hr>
+
+
+<p>The toString() method can output numbers from base 2 to 36:</p>
+<p id="demo70"></p>
+<script>
+    let number38 = 32;
+    document.getElementById("demo70").innerHTML = 
+    "Decimal 32 = " + "<br>  <br>" +
+    "Hexatrigesimal (base 36):" + number38.toString(36)+ "<br>"+
+"Hexadecimal (base 16): " + number38.toString(16) + "<br>" +
+"Duodecimal (base 12): " + number38.toString(12) + "<br>" +
+"Decimal (base 10): " + number38.toString(10) + "<br>" +
+"Octal (base 8): " + number38.toString(8) + "<br>" +
+"Binary (base 2): " + number38.toString(2);
+</script>
+<hr><br>
+
+<h1>JavaScript BigInt</h1>
+<p>To create a BigInt, append n to the end of an integer 
+    or call BigInt():</p>
+<p id="demo71"></p>
+
+    <script>
+    let x39 = 9999999999999999;
+    let y39 = BigInt("9999999999999999");
+    document.getElementById("demo71").innerHTML = x39 + "<br>" + y39;
+    </script>
+<!-- Need to study again [JavaScript BigInt]-->
+<!-- Need to study again [JavaScript BigInt]-->
+<!-- Need to study again [JavaScript BigInt]-->
+<hr><br>
+
+
+
+<h1>JavaScript Number Methods</h1>
+<p id="demo72"></p>
+<script>
+    let x40 = 123;
+    document.getElementById('demo72').innerHTML = 
+    x40.toString() + "<br>" + (123).toString() + "<br>" +
+    (100+23).toString();
+</script>
+<hr>
+
+<h3>toExponential() returns a string, with a number rounded and written 
+    using exponential notation.</h3>
+    <p>An optional parameter defines the number of digits behind 
+        the decimal point.</p>
+
+<p id="demo73"></p>
+<script>
+    let x41 = 9.656;
+    document.getElementById('demo73').innerHTML = 
+    x41.toExponential() + "<br>" +
+    x41.toExponential(2) + "<br>"  + 
+    x41.toExponential(4) + "<br>" + 
+    x41.toExponential(6);
+
+
+</script>
+<hr>
+
+<p>The toFixed() method rounds a number to a given number of digits.</p>
+<p id="demo74"></p>
+<script>
+    let x42 = 9.656;
+
+    document.getElementById('demo74').innerHTML =
+    x42.toFixed(0)+ "<br>" +
+    x42.toFixed(2)+ "<br>" +
+    x42.toFixed(4)+ "<br>" +
+    x42.toFixed(6);
+
+</script>
+<hr>
+
+<p>The isSafeInteger() method returns true if the argument 
+    is a safe integer.</p>
+<p id="demo75"></p>
+<script>
+    document.getElementById('demo75').innerHTML = 
+    Number.isSafeInteger(10)+ "<br>" +
+    Number.isSafeInteger(12345678901234567890);
+</script>
+<hr><br>
+
+
+<h1>JavaScript Arrays</h1>
+<p id="demo76"></p>
+<script>
+    const cars43 = ["Saab", "Volvo", "BMW"];
+
+    document.getElementById("demo76").innerHTML = cars43;
+</script>
+<hr>
+
+<p id="demo77"></p>
+<script>
+    const cars44 = [];
+    cars44[0]= "Saab";
+    cars44[1]= "Volvo";
+    cars44[2]="BMW";
+
+    document.getElementById("demo77").innerHTML = cars44;
+</script>
+<hr>
+
+<p>Using the JavaScript Keyword new</p>
+<p id="demo78"></p>
+<script>
+    const cars45 = new Array("Saab", " Volvo", " BMW");
+//You access an array element by referring to the index number:
+    document.getElementById("demo78").innerHTML = cars45[1];
+</script>
+<hr>
+<p>Objects use names to access its "members". In this example, 
+    person.firstName returns John:</p>
+
+<p id="demo79"></p>
+<script>
+    const person46 = {
+    firstName46: "John",
+    lastName46:"Doe", 
+    age46:46
+};
+document.getElementById('demo79').innerHTML = 
+person46.firstName46;
+
+</script>
+<hr>
+<p>The length property returns the length of an array:</p>
+<p id="demo80"></p>
+<script>
+    const fruits47 = ["Banana", "Orange", "Apple", "Mango"];
+    let size47 = fruits47.length;
+    document.getElementById('demo80').innerHTML = size47;
+</script>
+<hr>
+
+<p>Accessing the Last Array Element</p>
+<p id="demo81"></p>
+<script>
+    const fruits48 = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo81").innerHTML = 
+    fruits48[fruits48.length-1];
+</script>
+<hr>
+<h3>Looping Array Elements</h3>
+<p id="demo82"></p>
+<!-- Need to practice this code again -->
+<script>
+    const fruits49 = ["Banana", "Orange", "Apple", "Mango"];
+    let fLen49 = fruits49.length;
+    let text49 = "<ul>";
+    for (let i49 = 0; i49< fLen49; i49++){
+        text49 +="<li>" +
+            fruits49[i49]+ "</li>";
+    }text49 +="</ul>";
+
+    document.getElementById('demo82').innerHTML = text49;
+</script>
+<hr>
+<p>The forEach() Method</p>
+<!-- Need to practice this code again -->
+ <hr>
+
+ <h3>Adding Array Elements</h3>
+<p>The easiest way to add a new element to an array is using 
+    the push() method:</p>
+<button onclick = "myFunction50()">
+    Try It
+</button>
+<p id="demo83"></p>
+<script>
+    const fruits50= ["Banana", "Orange", "Apple"];
+    document.getElementById("demo83").innerHTML = fruits50;
+    function myFunction50(){
+        fruits50.push("Lemon");
+        document.getElementById("demo83").innerHTML = fruits50
+    }
+</script>
+<hr>
+<!-- JavaScript does not support arrays with named indexes.
+
+In JavaScript, arrays always use numbered indexes.   -->
+
+
+<p>To access arrays inside arrays, use a for-in loop for each array:</p>
+<!--Need to practice Nested JavaScript Objects and Arrays. -->
+
+<!-- <p id="demo"></p>
+
+<script>
+let x = "";
+const myObj = {
+  name: "John",
+  age: 30,
+  cars: [
+    {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+    {name:"BMW", models:["320", "X3", "X5"]},
+    {name:"Fiat", models:["500", "Panda"]}
+  ]
+}
+
+for (let i in myObj.cars) {
+  x += "<h2>" + myObj.cars[i].name + "</h2>";
+  for (let j in myObj.cars[i].models) {
+    x += myObj.cars[i].models[j] + "<br>";
+  }
+}
+
+document.getElementById("demo").innerHTML = x;
+</script> -->
+<hr>
+<h1>JavaScript Array Methods</h1>
+<hr>
+<h1>JavaScript Array Search</h1>
+<hr>
+<h1>JavaScript Sorting Arra</h1>
+<hr>
+<h1>JavaScript Array Iteration</h1>
+<hr>
+<h1>JavaScript Array Const</h1>
+
+<hr>
+<h1>JavaScript Date Objects</h1>
+
+
+<p id="demo84"></p>
+<p id="demo85"></p>
+<p id="demo86"></p>
+<script>
+    const d50 = new Date();
+    const d51 =new Date("2022-03-25");
+    const d52 = new Date("October 13, 2014 11:13:00");
+    document.getElementById('demo84').innerHTML = d50;
+    document.getElementById('demo85').innerHTML = d51;
+    document.getElementById('demo86').innerHTML = d52;
+</script>
+<hr>
+
+<p>6 numbers specify year, month, day, hour, minute and second:</p>
+<p id="demo87"></p>
+<script>
+const d53 = new Date(2018, 11, 24, 10, 33, 30);
+document.getElementById('demo87').innerHTML = d53;
+</script>
+<hr>
+<!--  -->
+<p>When you display a date object in HTML, it is automatically 
+    converted to a string, with the toString() method.</p>
+<p id="demo88"></p>
+<script>
+    const d54 = new Date();
+
+    document.getElementById('demo88').innerHTML = d54.toDateString();
+</script>
+<!-- The toUTCString() method converts a date to a string using 
+ the UTC standard: -->
+
+<!-- The toISOString() method converts a date to a string using 
+ the ISO standard: -->
+<hr>
+
+<p>Short dates are written with an "MM/DD/YYYY" syntax like this:</p>
+<p id="demo89"></p>
+
+<script>
+const d55 = new Date("03/25/2015");
+document.getElementById("demo89").innerHTML = d55;
+</script>
+<hr>
+<!-- JavaScript Math Object -->
+ <h1>JavaScript Math Object</h1>
+<p>JavaScript provides 8 mathematical constants that can be accessed 
+    as Math properties:</p>
+
+<p id="demo90"></p>
+<script>
+    document.getElementById('demo90').innerHTML = 
+"<p><b>Math.E:</b> " +  Math.E + "</p>" +
+"<p><b>Math.PI:</b> " + Math.PI + "</p>" +
+"<p><b>Math.SQRT2:</b> " + Math.SQRT2 + "</p>" +
+"<p><b>Math.SQRT1_2:</b> " + Math.SQRT1_2 + "</p>" +
+"<p><b>Math.LN2:</b> " + Math.LN2 + "</p>" +
+"<p><b>Math.LN10:</b> " + Math.LN10 + "</p>" +
+"<p><b>Math.LOG2E:</b> " + Math.LOG2E + "</p>" +
+"<p><b>Math.Log10E:</b> " + Math.LOG10E + "</p>";
+</script>
+<hr>
+<p>Math.round(x) returns the nearest integer:</p>
+<p>Math.ceil(x) returns the value of x rounded up to 
+    its nearest integer:</p>
+<p>Math.floor(x) returns the value of x rounded down to 
+    its nearest integer:</p>
+<p>Math.trunc(x) returns the integer part of x:</p>
+
+<p id="demo91"></p>
+<p id="demo92"></p>
+<script>
+    document.getElementById("demo91").innerHTML = Math.round(4.6);
+    document.getElementById("demo92").innerHTML = Math.ceil(4.4);
+</script>
+<hr>
+<p>Math.pow(x, y) returns the value of x to the power of y:</p>
+Math.sqrt(x) returns the square root of x:
+<p id="demo93"></p><p id="demo94"></p>
+<script>
+    document.getElementById("demo93").innerHTML = Math.pow(8,2);
+    document.getElementById("demo94").innerHTML = Math.sqrt(64);
+</script>
+<hr>
+
+<p>Math.sin(x) returns the sin of x (given in radians):</p>
+<p>Angle in radians = (angle in degrees) * PI / 180.</p>
+<p id="demo95"></p>
+<script>
+    document.getElementById("demo95").innerHTML=
+    "The Value of 90 degrees is: " +Math.sin(90 * Math.PI / 180);
+    
+</script>
+<hr>
+<p>Math.min() and Math.max() can be used to find the lowest or 
+    highest value in a list of arguments:</p>
+
+    <p id="demo96"></p>
+
+    <script>
+    document.getElementById("demo96").innerHTML =
+    Math.min(0, 150, 30, 20, -8, -200);
+    </script>
+<hr>
+
+<h1>JavaScript Random</h1>
+<p>Math.random() returns a random number between 0 (included) and
+     1 (excluded):</p>
+
+<p id="demo97"></p>
+<script>
+    document.getElementById('demo97').innerHTML=
+    Math.random();
+</script>
+<hr>
+<p>Math.floor(Math.random() * 10) returns a random integer 
+    between 0 and 9 (both included):</p>
+    <p id="demo98"></p>
+<script>
+    document.getElementById('demo98').innerHTML=
+    Math.floor(Math.random() * 10);
+</script>
+<hr>
+
+<!-- // Returns a random integer from 1 to 100: -->
+ <p>Returns a random integer from 1 to 100:</p>
+<p id="demo99"></p>
+<script>
+    document.getElementById("demo99").innerHTML=
+    Math.floor(Math.random() *100)+1;
+</script>
+<hr>
+
+
+<p>A Proper Random Function</p>
+<p>Every time you click the button, getRndInteger(min, max) 
+    returns a random number between 0 and 9 (both included):</p>
+
+<button onclick="document.getElementById('demo100').innerHTML =
+ getRndInteger(0,10)">Click Me</button>
+
+<p id="demo100"></p>
+
+<script>
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+</script>
+<hr>
+
+<h1>JavaScript Booleans</h1>
+<p>You can use the Boolean() function to find out if an expression 
+    (or a variable) is true:</p>
+<p id="demo101"></p>
+<script>
+    document.getElementById('demo101').innerHTML=Boolean(10>9);
+</script>
+<hr>
+
+<p id="demo102"></p>
+
+<script>
+document.getElementById("demo102").innerHTML = 10 > 9;
+</script>
+<hr>
+
+<p id="demo103"></p>
+<script>
+ document.getElementById("demo103").innerHTML =
+"100 is " + Boolean(100) + "<br>" +
+"3.14 is " + Boolean(3.14) + "<br>" +
+"-15 is " + Boolean(-15) + "<br>" +
+"Any (not empty) string is " + Boolean("Hello") + "<br>" +
+"Even the string 'false' is " + Boolean('false') + "<br>" +
+"Any expression (except zero) is " + Boolean(1 + 7 + 3.14);   
+</script>
+<hr>
+<p>Booleans and Boolean objects cannot be safely compared:</p>
+<p id="demo104"></p>
+<script>
+    let x104 = false;
+    let y104 = new Boolean(false);
+    document.getElementById('demo104').innerHTML =
+     typeof x104 + "<br>" + typeof y104;
+</script>
+<hr>
+<br><br>
+<h1>JavaScript Comparison and Logical Operators</h1>
+
+<p>The NOT operator (!) returns true for false statements and false 
+    for true statements.</p>
+<p id="demo105"></p>
+<script>
+    let x105 = 6;
+    let y105 = 3;
+    document.getElementById('demo105').innerHTML= 
+    !(x105 === y105) + "<br>" + !(x105 > y105);
+</script>
+<hr>
+
+<h3>The () ? : Ternary Operator</h3>
+<p>Input your age and click the button:</p>
+
+<button onclick="myFunction106()">
+    Try It
+</button>
+<p id="demo106"></p>
+<script>
+    function myFunction106(){
+        let age106 = document.getElementById("age106").value;
+        let voteable106 = (age106<18)? "Too young" : "Old enough";
+
+        document.getElementById('demo106').innerHTML = 
+        voteable106 + "to vote.";
+    }
+</script>
+<hr>
+
+
+<button onclick="myFunction107()">Try it</button>
+
+<p id="demo107"></p>
+
+<script>
+function myFunction107() {
+  let age107 = document.getElementById("age107").value;
+  let voteable107 = (age107 < 18) ? "Too young":"Old enough";
+  document.getElementById("demo107").innerHTML = voteable107 + " to vote.";
+}
+</script>
+<hr>
+<p>Comparing Different Types</p>
+<!-- When comparing two strings, "2" will be greater than "12", 
+ because (alphabetically) 1 is less than 2. -->
+<p id="demo108"></p>
+<script>
+    document.getElementById("demo108").innerHTML = "2">"12";
+</script>
+<br>
+<h3>The ?? operator returns the first argument if it is not nullish 
+    (null or undefined).</h3>
+<p id="demo109"></p>
+<script>
+    let name109 = null;
+    let text109 = "Saddam";
+    let result109 = name109 ?? text109;
+    document.getElementById('demo109').innerHTML =
+     "The Name is : "+result109;
+</script>
+<hr>The ?? operator returns the first argument if it is not nullish 
+(null or undefined).
+<p id="demo110"></p>
+<script>
+    const car110 = {type110: "Fiat",
+        model10: "500", color110: "white"
+    };
+    let name110 = car110 ?.name110;
+    document.getElementById('demo110').innerHTML=
+    name110;
+</script>
+<hr>
+
+<h1>JavaScript if, else, and else if</h1>
+
+<p>Display "Good day!" if the hour is less than 18:00:</p>
+<p id="demo111">Good Evening!</p>
+<script>
+    if (new Date().getHours()<18){
+        document.getElementById("demo111").innerHTML = "Good Day! ";
+    }
+</script>
+<hr>
+<p id="demo112"></p>
+<script>
+    const hour112 = new Date().getHours();
+    let greeting112;
+
+    if (hour112<18){
+        greeting112 = "Good day, 112";
+    }else{
+        greeting112 = "Good evening, 112";
+    }
+    document.getElementById('demo112').innerHTML = greeting112;
+</script>
+<hr>
+
+
+<p>Use the else if statement to specify a new condition if the 
+    first condition is false.</p>
+
+<p id="demo113"></p>
+<script>
+    const time113 = new Date().getHours();
+    let greeting113;
+    if (time113< 10){
+        greeting113 = "Good Morning";
+    } else if (time113 < 20){
+        greeting113 = "Good day";
+    } else{
+       greeting113 = "Good Evening";
+    }
+    document.getElementById("demo113").innerHTML = greeting113;
+</script>
+<hr>
+
+<h1>JavaScript Switch Statement</h1>
+
+<p id="demo114"></p>
+<script>
+    let day114;
+    switch (new Date().getDay()){
+        case 0:
+        day114 = "Sunday";
+        break;
+        case 1: 
+        day114 = "Monday";
+        break;
+        case 2:
+        day114 = "Tuesday";
+        break;
+        case 3:
+        day114 = "Wednesday";
+        break;
+        case 4:
+        day114 = "Thursday";
+        break;
+        case 5:
+        day114 = "Friday";
+        break;
+        case  6:
+        day114 = "Saturday";
+
+    }
+    document.getElementById("demo114").innerHTML = "Today is " +day114;
+</script>
+<hr>
+
+
+
+
 
 
 
