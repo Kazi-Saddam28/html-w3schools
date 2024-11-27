@@ -1559,9 +1559,125 @@ function myFunction107() {
     document.getElementById("demo114").innerHTML = "Today is " +day114;
 </script>
 <hr>
+<p id="demo115"></p>
+<script>
+    let text115;
+    switch (new Date().getDay()){
+        case 6: 
+        text115 = "Today is Saturday";
+        break;
+        case 0:
+        text115 =" Today is Sunday";
+        break;
+        default:
+        text = "Looking forward to the weekend";
+    }
+    document.getElementById("demo115").innerHTML=
+    text115;
+</script>
+<hr>
+
+<!-- JavaScript For Loop -->
+<h1>JavaScript For Loop</h1>
+<p id="demo116"></p>
+<script>
+    const cars116 =["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+let text116 = "";
+for (let i116=0; i116<cars116.length;i116++){
+    text116 += cars116[i116]+ "<br>";
+}
+document.getElementById("demo116").innerHTML = text116;
+</script>
+<hr>
+
+<p id="demo117"></p>
+<script>
+    let text117 ="";
+    for(let i117=0; i117<5; i117++){
+        text117 +="The Number is: " +i117+ "<br>";
+    }
+    document.getElementById("demo117").innerHTML = text117;
+</script>
+<hr>
+
+<p id="demo118"></p>
+<script>
+    const cars118 = ["BMW", "Volvo", "Saab", "Ford"];
+    let i118, len118, text118;
+    for(i118 = 0, len118=cars118.length, text118 = ""; 
+        i118<len118; 
+        i118++
+    ){
+        text118 += cars118[i118]+ "<br>";
+    }
+    document.getElementById("demo118").innerHTML = text118;
+</script>
+
+<p>you can omit expression 1 (like when your values are 
+    set before the loop starts):</p>
+ <p id="demo119"></p>
+<script>
+    const cars119 = ["BMW", "Volvo", "Saab", "Ford"];
+    let i119 = 2;
+    let len119 = cars119.length;
+    let text119 = "";
+
+    for(; i119 < len119; i119++){
+        text119 += cars119[i119] + "<br>";
+     }
+     document.getElementById("demo119").innerHTML = text119;
+</script>
+<hr> 
 
 
+<p>Expression 3 can also be omitted (like when you increment your 
+    values inside the loop):</p>
 
+<p id="demo120"></p>
+<script>
+    const cars120 = ["BMW", "Volvo", "Saab", "Ford"];
+    let i120 = 0;
+    let len120 = cars120.length;
+    let text120 = "";
+    for(; i120<len120;){
+        text120 +=cars120[i120]+ "<br>"
+        i120++;
+    }
+    document.getElementById("demo120").innerHTML = text120;
+
+</script>
+<hr>
+
+
+<!-- JavaScript For In -->
+<h1>JavaScript For In</h1>
+<p>The for in statement loops through the properties of an object:</p>
+<p id="demo121"></p>
+<script>
+    const person121 = {
+        fname121: "John",
+        lname121: "Doe", 
+        age :25
+    };
+
+    let txt121 = "";
+    for (let x121 in person121){
+        txt121 += person121[x121]+ " ";
+    }
+
+    document.getElementById("demo121").innerHTML = txt121;
+</script>
+<hr>
+<p id="demo122"></p>
+<script>
+    const numbers122 = [45, 4, 6, 3, 9];
+    let txt122 = "";
+    for(let x122 in numbers122){
+        txt122 += numbers122[x122] + "<br>";
+    }
+    document.getElementById('demo122').innerHTML= txt122;
+</script>
 
 
 
