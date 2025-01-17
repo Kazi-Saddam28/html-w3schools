@@ -1678,6 +1678,115 @@ document.getElementById("demo116").innerHTML = text116;
     }
     document.getElementById('demo122').innerHTML= txt122;
 </script>
+<!-- Do not use for in over an Array if the index order is important. -->
+<hr>
+
+<h2>The forEach() Method</h2>
+<p id="demo123"></p>
+
+<script>
+    const numbers123 = [45, 4, 9, 16, 25];
+    let txt123 = "";
+    numbers123.forEach(myFunction123);
+    document.getElementById("demo123").innerHTML = txt123;
+    function myFunction123(value, index, array){
+        txt123 += value + "<br>";
+    }
+</script>
+<hr>
+
+
+<!-- JavaScript For Of -->
+ <h1>JavaScript For Of</h1>
+ <p>The for of statement loops through the values of any iterable object:</p>
+<p id="demo124"></p>
+<script>
+const cars124 = ["BMW", "Volvo", "Mini"];
+let text124 = "";
+for(let x124 of cars124){
+    text124 += x124 + "<br>";
+}
+
+document.getElementById("demo124").innerHTML = text124 ;
+</script>
+<hr>
+
+<p>The for of statement loops through the values of an iterable object.</p>
+<p id="demo125"></p>
+<script>
+    let language125 = "JavaScript";
+    let text125 ="";
+    for(let x125 of language125){
+    text125 +=x125+ "<br>";
+    }
+    document.getElementById("demo125").innerHTML=text125;
+</script>
+<hr>
+
+<h1>JavaScript While Loop</h1>
+<p>The while loop loops through a block of code as long as a specified
+     condition is true.</p>
+
+<p id="demo126"></p>
+<script>
+    let text126 ="";
+    let i126 = 0;
+    while (i126<10){
+        text126 += "<br> The Number is: " +i126;
+        i126++;
+    }
+    document.getElementById("demo126").innerHTML= text126;
+
+</script>
+<hr>
+
+<h2>JavaScript Do While Loop</h2>
+<p id="demo127"></p>
+<script>
+    let text127 ="";
+    let i127 = 0;
+    do{
+        text127 += "<br>The number is: "+i127;
+        i127++;
+    }
+    while(i127 < 10);
+    document.getElementById("demo127").innerHTML = text127;
+</script>
+<br>
+
+
+<!-- JavaScript Break and Continue -->
+<h1>JavaScript Break and Continue</h1>
+<p>The break statement "jumps out" of a loop. <br>
+
+    The continue statement "jumps over" one iteration in the loop.</p>
+
+<b>break</b> statement.</p>
+<!-- if (i === 3) { break; }
+  -->
+<p id="demo128"></p>
+<script>
+    let text128 ="";
+    for(let i128 = 0; i128<10 ; i128++)
+       {
+        if(i128 == 3){break;}
+        text128 += "The Number is "+i128+ "<br>";
+       }
+       document.getElementById("demo128").innerHTML =text128;
+</script>
+<hr>
+
+<p>This example skips the value of 3:</p>
+<p id="demo129"></p>
+<script>
+    let text129 = "";
+    for(let i129= 0; i129<10; i129++){
+        if(i129 == 3){continue;}
+        text129 += "The Number is: "+i129 + "<br>";
+    }
+    document.getElementById("demo129").innerHTML=text129;
+</script>
+
 
 
 
