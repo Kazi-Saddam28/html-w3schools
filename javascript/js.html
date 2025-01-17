@@ -1669,6 +1669,7 @@ document.getElementById("demo116").innerHTML = text116;
     document.getElementById("demo121").innerHTML = txt121;
 </script>
 <hr>
+<p>The for in statement can loops over array values:</p>
 <p id="demo122"></p>
 <script>
     const numbers122 = [45, 4, 6, 3, 9];
@@ -1678,6 +1679,603 @@ document.getElementById("demo116").innerHTML = text116;
     }
     document.getElementById('demo122').innerHTML= txt122;
 </script>
+
+<h3>The forEach() Method</h3>
+<p>The forEach() method calls a function (a callback function) 
+    once for each array element.</p>
+
+
+<p>The forEach() Method</p>
+<p id="demo123"></p>
+<script>
+    const number123 =[45, 4, 9, 16, 25];
+    let text123 = "";
+    number123.forEach(myFunction123);
+    document.getElementById("demo123").innerHTML=
+    text123;
+    function myFunction123(value, index, array){
+        text123+=value + "<br>";
+    }
+
+</script>
+
+<h1>JavaScript For Of</h1>
+
+<p>Looping over an Array</p>
+<p>The for of statement loops through the values of any 
+    iterable object:</p>
+<p id="demo124"></p>
+<script>
+    const cars124 = ["BMW", "Volvo", "Mini"];
+    let text124 = "";
+    for (let x124 of cars124){
+        text124+=x124+"<br>";
+    }
+    document.getElementById("demo124").innerHTML
+    =text124;
+
+</script>
+<br><hr>
+
+
+<!-- JavaScript While Loop< -->
+
+<h1>JavaScript While Loop</h1>
+<p>The while loop loops through a block of code as long as 
+    a specified condition is true.</p>
+ 
+<!-- In the following example, the code in the loop will run, 
+ over and over again, as long as a variable (i) is less than 10: -->
+<p id="demo125"></p>
+<script>
+    let text125= "";
+    let i125= 0;
+    while(i125<10){
+        text125+="<br>The number is "+i125;
+        i125++;
+    }
+    document.getElementById("demo125").innerHTML
+    =text125;
+    // If you forget to increase the variable used in the condition, 
+    // the loop will never end. This will crash your browser.
+</script>
+<hr> 
+
+<h3>The Do While Loop</h3>
+<p> The loop will always be executed at least once, even if the 
+    condition is false,</p>
+<p id="demo126"></p>
+<script>
+    let text126= "";
+    let i126 = 0 ;
+    do{
+        text126 += "<br>The Number is "+i126;
+        i126++;
+    }
+    while(i126<10);
+    document.getElementById("demo126").innerHTML=text126;
+</script> 
+<hr>
+
+
+<p id="demo127"></p>
+<script>
+    const cars127 = ["BMW", "Volvo", "Saab", "Ford"];
+
+    let i127 = 0;
+    let text127 = "";
+    while (cars127[i127]){
+        text127 += cars127[i127] + "<br>";
+        i127++;
+    }
+    document.getElementById("demo127").innerHTML=text127;
+</script>
+
+<hr>
+
+
+<h1>JavaScript Break and Continue</h1>
+
+<p>The break statement "jumps out" of a loop.
+
+    The continue statement "jumps over" one iteration in the loop.</p>
+
+<p id="demo128"></p>
+<script>
+    let text128 = "";
+    for(let i128=0; i128<10; i128++){
+        if(i128==3){break;}
+        text128 += "The number is " + i128 + "<br>";
+    }
+    document.getElementById("demo128").innerHTML=text128;
+</script>
+<br>
+
+
+<p>This example skips the value of 3:</p>
+<p id="demo129"></p>
+<script>
+    let text129 = ""
+    for(let i129=0; i129<10 ; i129++){
+        if(i129 == 3){continue;}
+        text129 += "The number is "+i129 + "<br>";
+    }
+    document.getElementById("demo129").innerHTML= text129;
+</script>
+<br><hr>
+
+
+<h1>JavaScript Iterables</h1>
+<h2>Iterate over a String</h2>
+<p>You can use a for..of loop to iterate over the elements of a string:</p>
+
+<p id="demo130"></p>
+<script>
+    const name130= "W3Schools";//create a string
+
+    let text130 = ""; //List all elemnts
+    for(const x130 of name130){
+        text130 += x130+ "<br>";
+    }
+    document.getElementById("demo130").innerHTML= text130;
+
+</script>
+<hr>
+
+<p>You can use a for..of loop to iterate over the elements of an Array:</p>
+<p id="demo131"></p>
+<script>
+    const letters131 =["a", "b", "c"]; //csreate an array
+  
+    //list all element
+    let text131 =""; 
+    for (const x131 of letters131){
+        text131 += x131 + "<br>";
+    }
+    document.getElementById("demo131").innerHTML=text131;
+
+</script>
+<hr>
+
+<h2>Iterate over a Set</h2>
+
+<p id="demo132"></p>
+
+<script>
+    const letters132 =new Set(["a","b","c"]);
+    let text132= "";
+    for(const x132 of letters132){
+        text132 += x132 + "<br>";
+    }
+    document.getElementById("demo132").innerHTML=text132;
+</script>
+<hr>
+
+
+<h2>Iterate over a Map</h2>
+<p id="demo133"></p>
+<script>
+    const fruits133 = new Map([["Apples", 500],["Bananas", 300],["Oranges",200]]);
+    //List all entries
+    let text133 ="";
+    for(const x133 of fruits133){
+        text133 += x133+ "<br>";
+
+    }
+    document.getElementById("demo133").innerHTML=text133;
+</script>
+
+<br><br><hr><br>
+
+
+<h1>JavaScript Sets</h1>
+
+<h3>You can create a JavaScript Set by:</h3>
+<p>Passing an array to new Set() <br>
+    Create an empty set and use add() to add values</p>
+
+<!-- Create a set from an array: -->
+<p>Create a set from an array:</p>
+<p id="demo134"></p>
+<script>
+//create a set
+const letters134 = new Set(["a","b","c"]);
+
+//display set.size
+document.getElementById("demo134").innerHTML = "The set has "
++ letters134.size + " Values.";
+
+</script>
+<hr>
+
+
+<h3>The add() Method</h3>
+<p id="demo135"></p>
+<script>
+//create a set
+const letters135 = new Set();
+//Add Values to the set
+    letters135.add("a");
+    letters135.add("b");
+    letters135.add("c");
+
+    //Display the Size
+    document.getElementById("demo135").innerHTML=
+    "the set has " + letters135.size + "values.";
+
+</script>
+<hr>
+
+<p id="demo136"></p>
+<script>
+    //Create a set
+    const letters136 = new Set(["a", "b","c"]);
+    //add new element
+    letters136.add("d");
+    letters136.add("e");
+
+    //Display set.size
+    document.getElementById("demo136").innerHTML="The set has "
+    +letters136.size + "values";
+</script>
+<hr>
+
+
+<p id="demo137"></p>
+<p id="demo138"></p>
+<script>
+    //Create set
+    const letters137 = new Set();
+
+    //create variables
+    const a137= "a";
+    const b137= "b";
+    const c137 = "c";
+
+    //Add Values as Variables to the set
+    letters137.add(a137);
+    letters137.add(b137);
+    letters137.add(c137);
+
+    //display the size
+    document.getElementById("demo137").innerHTML=
+    "The set has " + letters137.size+ "Values.";
+
+    //list all elements
+    let text137="";
+    for (const x137 of letters137){
+        text137 +=x137 + "<br>";
+    }
+    document.getElementById("demo138").innerHTML=text137;
+</script>
+<hr>
+
+
+
+<h1>JavaScript Set Methods</h1>
+<h3>The has() Method</h3>
+<p>The has() method returns true if a set contains 
+    a spesific value:</p>
+<p id="demo139"></p>
+<script>
+    //create a new set
+    const letters139= new Set(["a","b","c"]);
+    
+    //does the set contains "d"?
+    answer = letters137.has("d");
+    document.getElementById("demo139").innerHTML="The set has "
+    +answer;
+
+</script>
+<hr>
+
+<h3>The forEach() Method</h3>
+<p>forEach() calls a function for each element in a Set:</p>
+<p id="demo140"></p>
+<script>
+    //create a Set
+    const letters140= new Set(["a","b","c"]);
+    //list all elements
+    let text140 ="";
+    letters140.forEach (function(value){
+        text140 +=value +"<br>";
+    })
+    document.getElementById("demo140").innerHTML=text140;
+</script>
+<hr>
+
+
+
+<h3>The values() Method</h3>
+<p>The values() method returns an Iterator object with
+     all the values in a Set.</p>
+
+
+<p id="demo141"></p>
+<script>
+    //create a set
+    const letters141=new Set(["a","b","c"]);
+    //create an iterator
+    const myIterator141 =letters141.values();
+
+    //List all Elements
+    let text141="";
+    for(const x141 of myIterator141){
+        text141 +=x141 +"<br>";
+    }
+    document.getElementById("demo141").innerHTML=text141;
+</script>
+<hr>
+
+
+
+
+
+
+<h1>JavaScript Maps</h1>
+<h3>The new Map Method()</h3>
+<p>Creating a map from an array:</p>
+<p id="demo142"></p>
+<script>
+    //create a Map
+    const fruits142=new Map([
+        ["apples",500],
+        ["bananas", 300],
+        ["oranges",200]
+    ]);
+    let numb142 = fruits142.get("apples");
+    document.getElementById("demo142").innerHTML=
+    "There are " + numb142 + " apples,";
+</script>
+<hr>
+
+<h3>The set() Method</h3>
+<p id="demo143"></p>
+<script>
+    //create Map
+    const fruits143 = new Map();
+    //Set Map Values
+    fruits143.set("apples",500);
+    fruits143.set("banans");
+    fruits143.set("oranges");
+
+    let numb143=fruits143.get("apples");
+    document.getElementById("demo143").innerHTML=
+    "There are "+numb143+" apples"
+</script>
+<hr>
+
+<h3>The get() Method</h3>
+<p id="demo144"></p>
+<script>
+    //create Map
+    const fruits144 = new Map([
+        ["apples",500],
+        ["banans",300],
+        ["oranges",200]
+    ]);
+    document.getElementById("demo144").innerHTML=
+    fruits144.get("apples");
+</script>
+<hr><br><br>
+
+
+<h1>JavaScript typeof</h1>
+<p>JavaScript has 7 primitive data types: <br>
+    string, number, boolean, bigint, symbol,
+     null, undefined </p>
+
+<p id="demo145"></p>
+<script>
+    document.getElementById("demo145").innerHTML=
+    "John is "+typeof "john"+"<br>"+
+    "1234n is "+typeof 1234n + "<br>";
+</script>
+<hr>
+
+<h3>The isArray() Method</h3>
+<p id="demo146"></p>
+<script>
+    const fruits146 =["Banana", "Orange", "Apple"];
+
+    document.getElementById("demo146").innerHTML=
+    Array.isArray(fruits146);
+</script>
+<hr>
+
+
+<p>Objects can be emptied by setting the value to null.</p>
+<p id="demo147"></p>
+<script>
+    //create an object
+    let person147 = {firstname147:"John",
+        lastname147:"Doe", age:50, eyecolor147:"blue"};
+
+        person147 = null;
+        document.getElementById("demo147").innerHTML=
+        "The typeof person is " +typeof person147;
+</script>
+<hr>
+
+<p>The unary + operator can be used to convert a 
+    variable to a number:</p>
+<p id="demo148"></p>
+<script>
+    let y148 ="5";
+    let x148 =+y148;
+    document.getElementById("demo148").innerHTML=
+    typeof y148 + "<br>" + typeof x148;
+</script>
+<hr><br><br>
+
+
+
+<h1>JavaScript Destructuring</h1>
+
+<h3>Object Destructuring</h3>
+<p id="demo149"></p>
+<script>
+    //create an object
+    const person149= {
+        firstname149:"John",
+        lastname149:"Doe",
+        age149:50
+    };
+
+    //Destructuring
+    let{lastname149, firstname149}=person149;
+
+    //Disply primitive values 
+
+    document.getElementById("demo149").innerHTML=
+    firstname149 + " " + lastname149;
+</script>
+<hr>
+
+
+<p>Object Destructuring</p>
+<p id="demo150"></p>
+<script>
+// Create an Object
+const person150 = {
+  firstName150: "John",
+  lastName150: "Doe",
+  age150: 50
+};
+
+// Destructuring
+let {firstName150, lastName150, country150 = "US"} = person150;
+
+// Display Primitive Values
+document.getElementById("demo150").innerHTML =
+firstName150 + " " + lastName150 + " " + country150;
+</script>
+<hr>
+
+
+<p id="demo151"></p>
+<script>
+    //create an object
+    const person151 = {
+        firstname151:"John",
+        lastname151:"Doe",
+        age151:50        
+    };
+    //Destructuring
+    let{lastname151 : name151} = person151;
+
+    //display primitive values
+    document.getElementById("demo151").innerHTML=name151;
+</script>
+<hr>
+
+<p>String Destructuring</p>
+<p id="demo152"></p>
+<script>
+    let name152= "W3Schools";
+
+    //Destructuring
+    let [aaa1, aaa2, aaa3, aaa4, aaa5] = name152;
+  
+    //Display Value
+    document.getElementById("demo152").innerHTML=
+    aaa1;
+</script>
+<hr>
+
+<h3>Array Destructuring</h3>
+<p id="demo153"></p>
+<script>
+    const fruits153 = ["Banans","Oranges","Apples","Mangos"];
+    //Distructuring
+    let [fruit1531,fruit1532]=fruits153;
+
+    //display primitive values
+    document.getElementById("demo153").innerHTML=
+    fruit1531 + " " + fruit1532;
+</script>
+<hr>
+
+<h3>Skipping Array Values</h3>
+<p>We can skip array values using two or more commas:</p>
+<p id="demo154"></p>
+<script>
+    const fruits154=["Bananas","Oranges","Apples","Mangos"];
+
+    //Distructuring
+    let [fruitf1,,,fruitf2] = fruits154;
+    
+    //display primitive values
+    document.getElementById("demo154").innerHTML=
+    fruitf1 +" "+ fruitf2;
+</script>
+<hr>
+
+
+<h3>Array Position Values</h3>
+<p>We can pick up values from specific index locations 
+    of an array:</p>
+
+<p id="demo155"></p>
+<script>
+    //create an array
+    const fruit155 = ["Banana","Orange","Apple", "Mangos"];
+
+    const {[0]:fruit1551 , [1]:fruit1552} = fruit155;
+
+    //Display Primitive Values
+    document.getElementById("demo155").innerHTML= 
+    fruit1551 + " " + fruit1552;
+</script>
+<hr>
+
+<h3>Destructuring Maps</h3>
+<p id="demo156"></p>
+<script>
+    //Create a Map
+    const fruit156 = new Map([
+        ["apples",500],
+        ["bananas",300],
+        ["oranges",200]
+    ]);
+
+    //Dectructing
+
+    let text156 = "";
+    for(const [key156 , value156] of fruit156){
+        text156 += "<p>" +key156 + " is "+ value156;
+    }
+
+    //Display the value
+    document.getElementById("demo156").innerHTML= 
+    text156;
+</script>
+<hr>
+
+<h2>Swapping JavaScript Variables</h2>
+<p>You can swap the values of two variables using a
+     destructuring assignment:</p>
+
+<p id="demo157"></p>
+<script>
+    let firstname157 ="John";
+    let lastname157 = "Doe";
+
+    //Destructing
+     [firstname157, lastname157] = [lastname157, firstname157];
+
+     //Desplay the value
+     document.getElementById("demo157").innerHTML= 
+     firstname157 + " " + lastname157;
+</script>
+<hr><br><br><hr>
+
+
+
+<h1>JS Bitwise</h1>
+<!-- //JavaScript Bitwise Operations -->
+
+
 
 
 
