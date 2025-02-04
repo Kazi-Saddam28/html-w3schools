@@ -2441,6 +2441,351 @@ firstName150 + " " + lastName150 + " " + country150;
 </script>
 <hr>
 
+<h3>Using String replace() With a String</h3>
+<p>The replace() method replaces a specified value 
+    with another value in a string:</p>
+
+<button onclick="myFunction163()">
+    Try it
+</button>
+<p id="demo163">Please visit Microsoft</p>
+<script>
+    function myFunction163(){
+       let text163 = document.getElementById("demo163").innerHTML;
+       document.getElementById("demo163").innerHTML 
+       = 
+       text163.replace("Microsoft", "W3Schools"); 
+    }
+</script>
+<hr>
+
+<p>Use a case insensitive regular expression to replace Microsoft 
+    with W3Schools in a string:</p>
+
+
+    <button onclick="myFunction164()">
+        Try it
+    </button>
+    <p id="demo164">Please visit Microsoft</p>
+    <script>
+        function myFunction164(){
+           let text163 = document.getElementById("demo164").innerHTML;
+           document.getElementById("demo164").innerHTML 
+           = 
+           text163.replace(/microsoft/i, "W3Schools"); 
+        }
+    </script>
+    <hr>
+
+    
+    
+<p>Search for an "e" in the next paragraph:</p>
+<p id="ppp01">The best things in life are free</p>
+<p id="demo165"></p>
+<script>
+    let text165 = 
+    document.getElementById("ppp01").innerHTML;
+    const pattern = /e/;
+    document.getElementById("demo165").innerHTML = 
+    pattern.test(text165);
+</script>
+<hr><br><hr>
+
+<!-- JavaScript Operator Precedence -->
+<h1>JavaScript Operator Precedence</h1>
+
+<p>When many operations has the same precedence, they 
+    are computed from left to right.</p>
+
+<p id="demo166"></p>
+<script>
+    document.getElementById("demo166").innerHTML= 
+    100 / 50 * 3;
+</script>
+<hr>
+
+
+<h3>The () ? : Ternary Operator</h3>
+<p>Input your age and click the button:</p>
+<input id="age167" value="18">
+<button onclick="myFunction167()">Try it</button>
+<p id="demo167"></p>
+<script>
+    function myFunction167(){
+        let age167 = 
+        document.getElementById("age167").value;
+        let voteable167 = (age167<18)? "Too young" : "Old enough";
+        document.getElementById("demo167").innerHTML= 
+        voteable167 + " to vote.";
+    }
+</script>
+<hr><br><br><hr>
+
+
+
+
+<h1>JavaScript Errors</h1>
+<h3>JavaScript Error Handling</h3>
+<p>How to use <b>catch</b> to display an error.</p>
+<p id="demo168"></p>
+<script>
+    try{
+        addalert("Welcome guest!");
+    }
+    catch(err){
+        document.getElementById("demo168").innerHTML = 
+        err.message;
+    }
+</script>
+<hr>
+
+<h3>JavaScript try and catch</h3>
+<h3>Input Validation Example</h3>
+<p>Please input a number between 5 and 10:</p>
+<input id="demo169" type="text">
+<button type="button" onclick="myFunction169()">
+    Test Input</button>
+<p id="ppp0111"></p>
+<script>
+    function myFunction169(){
+        const message = 
+        document.getElementById("ppp0111");
+        message.innerHTML = "";
+        let x169 = 
+        document.getElementById("demo169").value;
+        try{
+            if(x169.trim() == "") throw "empty";
+            if(isNaN(x169)) throw "not a number";
+            x169 = Number(x169);
+            if(x169 < 5) throw "too low";
+            if(x169 > 10) throw "too high";
+
+        }
+        catch(err){
+            message.innerHTML = "Input is " + err;
+        }
+        finally{
+            document.getElementById("demo169").value = "";
+        }
+    }
+</script>
+<h3>The finally Statement</h3>
+<p>The finally statement lets you execute code, 
+    after try and catch, regardless of the result:</p>
+<hr>
+
+<h2>JavaScript Errors</h2>
+<h3>The RangeError</h3>
+<p>You cannot set the number of significant digits too high:</p>
+<p id="demo170"></p>
+<script>
+    let num170= 1;
+    try{
+        num170.toPrecision(500);
+    }
+    catch(err){
+        document.getElementById("demo170").innerHTML = err.name;
+    }
+</script>
+<hr>
+
+<h3>The ReferenceError</h3>
+<p>You cannot use the value of a non-existing variable:</p>
+<p id="demo171"></p>
+<script>
+    let x171 = 5;
+    try{
+        x171 = y171+1;
+    }
+    catch(err){
+        document.getElementById("demo171").innerHTML = err.name;
+    }
+</script>
+<hr>
+
+<!-- <h3>The SyntaxError</h3>
+<p>You cannot evaluate code that contains a syntax error:</p>
+<p id="demo172"></p>
+<script>
+    try{
+        eval("alert('Hello')");
+    }
+    catch(err){
+        document.getElementById("demo172").innerHTML = err.name;
+    }
+</script> -->
+<hr>
+
+
+<h3>The TypeError</h3>
+<p>You cannot convert a number to upper case:</p>
+<p id="demo173"></p>
+<script>
+    let num173 = 1;
+    try{
+        num173.toUpperCase();
+    }
+    catch(err){
+        document.getElementById("demo173").innerHTML = err.name;
+    }
+</script>
+<hr><br><br><hr>
+
+
+<h1>JavaScript Scope</h1>
+<h2>Block Scope</h2>
+<p>JavaScript variables have 3 types of scope:
+    Block scope
+    Function scope
+    Global scope</p>
+<!-- ES6 introduced two important new JavaScript keywords: 
+ let and const.
+These two keywords provide Block Scope in JavaScript. -->
+
+<p><b>carName</b> is undefined outside myFunction():</p>
+
+<p id="demo1741"></p>
+<p id="demo1742"></p>
+<script>
+    myFunction174();
+
+    function myFunction174(){
+    let carname174 = "Volvo";
+    document.getElementById("demo1741").innerHTML = 
+    typeof carname174 + "" + carname174 ;
+    }
+    document.getElementById("demo1742").innerHTML = 
+    typeof carname174;
+</script>
+<hr>
+
+
+
+<p>A GLOBAL variable can be accessed from any script or function.</p>
+<p id="demo175"></p>
+<script>
+let carName175 = "Volvo";
+myFunction();
+function myFunction() {
+  document.getElementById("demo175").innerHTML = "I can display " 
+  + carName175;
+}
+</script>
+<hr>
+
+
+<h3>JavaScript Global Variables</h3>
+<p>If you assign a value to a variable that has not been declared, 
+    it will automatically become a GLOBAL variable:</p>
+<p>This code example will declare a global variable carName,
+     even if the value is assigned inside a function.</p>
+
+<p id="demo176"></p>
+<script>
+    myFunction176();
+    document.getElementById("demo176").innerHTML = 
+    "I can display " + carname176;
+
+    function myFunction176(){
+       carname176 = "Volvo"
+    }
+</script>
+
+<hr>
+
+
+<h3>Global Variables in HTML</h3>
+<p>In HTML, global variables defined with <b>var</b>,
+     will become window variables.</p>
+<p id="demo177"></p>
+<script>
+    var carname177 = "Volvo";
+    // Global variables defined with the let keyword do not 
+    // belong to the window object:
+
+    //code here can use window.carname
+    document.getElementById("demo177").innerHTML = 
+    "I can display " +window.carname177;
+</script>
+<hr>
+
+<h1>JavaScript Hoisting</h1>
+<h3>JavaScript Declarations are Hoisted</h3>
+<p>In JavaScript, a variable can be declared 
+    after it has been used.</p>
+<p id="demo178"></p>
+<script>
+    x178 = 5 ; //Assign 5 to x178
+
+    elem178 = document.getElementById("demo178");
+    //Find an element
+    elem178.innerHTML = x178;
+    //x178 in the Element
+
+    var x178; //Declare x178
+</script>
+<hr>
+
+<!-- Variables defined with let and const are hoisted 
+ to the top of the block, but not initialized. -->
+ <p>With <b>let</b>, you cannot use a variable before 
+    it is declared.</p>
+ <!-- This will result in a ReferenceError: -->
+ <p id="demo179"></p>
+<script>
+    try{
+        carname179 = "Saab";
+        let carname179= "Volvo";
+    }
+    catch(err){
+        document.getElementById("demo179").innerHTML = err;
+    }
+</script>
+<!-- Using a const variable before it is declared, is a 
+ syntax error -->
+<hr>
+
+
+<h1>JavaScript Use Strict</h1>
+<p>Strict mode is declared by adding "use strict"; to the beginning 
+    of a script or a function.</p>
+<!-- <p>Declared at the beginning of a script, it has global scope 
+    (all code in the script will execute in strict mode):</p> -->
+
+<p>Activate debugging in your browser (F12) to see the error
+     report.</p>
+<script>
+    "use strict";
+    x180 = 3.14 //This is cause an error(x180 is not defined)
+</script>
+<hr>
+
+<p>"use strict" in a function will only cause errors
+     in that function.</p>
+<script>
+x181 = 3,14; //This will not cause an error.Apples
+myFunction181();
+
+function myFunction181(){
+    "use strict"
+    y181 = 3.14; //This will cause an error(y is not defined)
+}
+</script>
+<hr>
+<!--The word arguments cannot be used as a variable:  -->
+
+<p>For security reasons, eval() is not allowed to create 
+    variables in the scope from which it was called.</p>
+
+<!-- <script>
+    "use script"
+    eval ("x182 = 2");
+    alert(x182);//This will cause an error
+</script> -->
+
+
+
+
 
 
 
