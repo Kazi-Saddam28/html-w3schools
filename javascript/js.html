@@ -2746,6 +2746,13 @@ function myFunction() {
 <hr>
 
 
+
+
+
+
+
+
+
 <h1>JavaScript Use Strict</h1>
 <p>Strict mode is declared by adding "use strict"; to the beginning 
     of a script or a function.</p>
@@ -2782,6 +2789,311 @@ function myFunction181(){
     eval ("x182 = 2");
     alert(x182);//This will cause an error
 </script> -->
+
+<h1>The JavaScript this Keyword</h1>
+<p>In this example, <b>this</b> refers to the <b>person</b> object.</p>
+<p>Because <b>fullName</b> is a method of the person object.</p>
+<p id="demo183"></p>
+<script>
+    //Create an object
+    const person183 ={
+        firstname183: " John",
+        lastname183: "Doe",
+        id183 : "5566",
+        fullname183: function() {
+            return this.firstname183 + " " + this.lastname183;
+        }
+    };
+
+    //Display data from the object:
+    document.getElementById("demo183").innerHTML =
+     person183.fullname183();
+</script>
+<hr>
+
+<p>When used alone, this refers to the global object.</p>
+<p id="demo184"></p>
+<script>
+    let x184 = this;
+    document.getElementById("demo184").innerHTML = x184;
+</script>
+<hr>
+
+<p> In strict mode, when used alone, this also 
+    refers to the global object:</p>
+
+<p id="demo185"></p>
+<script>
+    "use strict";
+    let x185 = this;
+    document.getElementById("demo185").innerHTML =x185;
+</script>
+<hr>
+
+
+<p>JavaScript strict mode does not allow default binding.<br>
+So, when used in a function, in strict mode, this is undefined.</p>
+<p id="demo186"></p>
+<script>
+    "use strict";
+    document.getElementById("demo186").innerHTML = myFunction186();
+    function myFunction186(){
+        return this;
+    }
+</script>
+<hr>
+
+<p>In HTML event handlers, this refers to the HTML element
+     that received the event:</p>
+
+<button onclick="this.style.display= 'none'">
+click to Remove Me!
+</button>
+<hr>
+
+<h3>Explicit Function Binding</h3>
+<p>The call() and apply() methods are
+ predefined JavaScript methods.<br>
+They can both be used to call an object method with another 
+object as argument.</p>
+
+<!-- <p>In this example <strong>this</strong> refers 
+    to person2, even if it is a method of person1:</p> -->
+<p id="demo187"></p>
+<script>
+    const person187 = {
+        fullname187 : function(){
+            return this.firstname187 + " " + this.lastname187;
+        }
+    }
+    const person188 = {
+        firstname187: "John",
+        lastname187: "Doe",
+    }
+    let x187 = person187.fullname187.call(person188);
+    document.getElementById("demo187").innerHTML = x187;
+</script>
+<hr>
+
+
+<p>With the bind() method, an object can borrow a method 
+    from another object. <br>
+This example creates 2 objects (person and member). <br>
+The member object borrows the fullname method from 
+the person object:</p>
+<p id="demo189"></p>
+<script>
+    const person189 ={
+        firstname189 : "John",
+        lastname189 : "Doe",
+        fullname189: function(){
+            return this.firstname189 + " " +
+            this.lastname189;
+        }
+    }
+    const member189 ={
+        firstname189 : "Hege",
+        lastname189: "Nilsen",
+    }
+    let fullname189 = 
+    person189.fullname189.bind(member189);
+    document.getElementById("demo189").innerHTML = fullname189();
+</script>
+<hr><br><br><br><hr>
+
+
+
+
+<h1>JavaScript Arrow Function</h1>
+<p>Arrow functions allow us to write shorter function syntax:</p>
+<p id="demo190"></p>
+<script>
+    let myFunction190 = (a190, b190 ) => a190 * b190;
+    document.getElementById("demo190").innerHTML =
+     myFunction190(4,5);
+</script>
+<hr>
+
+<p>Arrow Function With Parameters:</p>
+<p id="demo191"></p>
+<script>
+    let hello191 = "";
+    hello191 = (val191) => "Hello " +val191;
+    document.getElementById("demo191").innerHTML = 
+    hello191("Universe!");
+    //This example shows that if you have only one parameter in an 
+    // Arrow Function, you can skip the parentheses.
+    //hello191 = val191 => "Hello " +val191;
+</script>
+<hr>
+
+<p>In regular functions the this keyword represented the object 
+    that called the function, which could be the window, 
+    the document, a button or whatever.<br>
+
+    With arrow functions the this keyword always represents the
+     object that defined the arrow function.</p>
+
+<p>This example demonstrate that in a <b>regular function</b>, the 
+    "this" keyword represents different objects depending on
+     how the function was called.</p>
+     <!-- <p>Click the button to execute the "hello" function 
+        again, and you will see that this time "this" represents 
+        the button object.</p> -->
+<button id="btn192">
+Click Me!
+</button>
+<p id="demo192"></p>
+<script>
+    let hello192 = "";
+    hello192 = function(){
+    document.getElementById("demo192").innerHTML += this +"<br>";
+    };
+//This window object calls the function:
+window.addEventListener("load", hello192);
+//A button object calls the function:
+document.getElementById("btn192").addEventListener("click", hello192);
+</script>
+<hr>
+
+
+
+<h3>With an arrow function this represents the owner of the 
+    function:</h3>
+<button id="btn193">
+    Click Me!
+    </button>
+    <p id="demo193"></p>
+    <script>
+        let hello193 = "";
+        hello193 = () =>{
+        document.getElementById("demo193").innerHTML += this +"<br>";
+        };
+    //This window object calls the function:
+    window.addEventListener("load", hello193);
+    //A button object calls the function:
+document.getElementById("btn193").addEventListener("click", hello193);
+    </script>
+<hr>
+
+
+<h1>JavaScript Classes</h1>
+<p>Creating two car objects from a car class:</p>
+<p id="demo194"></p>
+<script>
+    class car194{
+        constructor(name194, year194){
+        this.name194 = name194;
+        this.year194 = year194;
+        }
+    }
+    const mycar194 = new car194("Ford", 2014);
+    const mycar195 = new car194("Audi", 2019);
+    document.getElementById("demo194").innerHTML = 
+    mycar194.name194 + " " + mycar195.name194;
+</script>
+<hr>
+
+<h2>Class Methods</h2>
+<p>Use the keyword class to create a class.<br>
+<b>Always add a constructor() method.</b><br>
+Then add any number of methods.</p>
+<p id="demo196"></p>
+<script>
+    class car196{
+        constructor(name196, year196){
+            this.name196 = name196;
+            this.year196 = year196;
+        }
+        age196(){
+            const date196 = new Date();
+            return date196.getFullYear()-this.year;
+        }
+    }
+    const mycar196 = new car196("Ford", 2014);
+    document.getElementById("demo196").innerHTML = 
+    "My car is : " + mycar196.agea96()+ "years old.";
+</script>
+<hr>
+
+
+<p>You can send parameters to Class methods:</p>
+<p id="demo197"></p>
+<script>
+    class car197{
+        constructor(name197, year197){
+            this.name197 = name197;
+            this.year197 = year197;
+        }
+        age197(x197){
+            return x197 - this.year197;
+        }
+  }
+  const date197 = new Date();
+  let year197 = date197.getFullYear();
+
+  const mycar197 = new car197("Ford", 2014);
+  document.getElementById("demo197").innerHTML = 
+  "My car is "+ mycar197.age197(year197)+ " years old."
+</script>
+<hr>
+
+<h1>JavaScript Modules</h1>
+<!-- Need to study again -->
+<p id="demo198"></p>
+<script type="module">
+import message from "./message.js";
+
+document.getElementById("demo198").innerHTML = message();
+</script>
+<hr>
+
+
+<p>Import from named exports</p>
+<p id="demo199"></p>
+<script type="module">  
+import {name199, age199} from "./person.js";
+let text199 = "My name is " + name199 + ", I am "+ age199 + ".";
+document.getElementById("demo199").innerHTML = 
+text199;
+</script>
+<hr>
+<!-- 
+<p id="demo200"></p>
+<script type="module">
+    import text200 from "./module.js";
+</script>
+<hr> -->
+
+
+<h1>JavaScript JSON</h1>
+<p>JSON format is text only.</p>
+<b><p>Create Object from JSON String</p></b>
+<p id="demo201"></p>
+<script>
+  let text201 = '{"employees201":['+
+  '{"firstname201":"John", "lastname201":"Doe"},' +
+  '{"firstname201":"Anna", "lastname201":"Smith"},'+
+  '{"firstname201":"Peter", "lastname201":"Jones"}'+
+  ']}';
+const obj201 = JSON.parse(text201);
+document.getElementById("demo201").innerHTML = 
+obj201.employees201[1].firstname201+ " "+
+obj201.employees201[1].lastname201;
+</script>
+<hr><br><br><br>
+
+<h1>JavaScript Debugging</h1>
+<p>Activate debugging in your browser (Chrome, IE, Firefox)
+     with F12, and select "Console" in the debugger menu.</p>
+
+<b><p>The debugger Keyword</p></b>
+<p id="demo202"></p>
+<script>
+    let x202 = 15 * 5;
+    debugger;
+    document.getElementById("demo202").innerHTML = x202;
+</script>
 
 
 
